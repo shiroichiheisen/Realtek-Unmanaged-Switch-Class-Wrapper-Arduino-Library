@@ -84,7 +84,10 @@ public:
      *      - LEAKY_CSSTP,
      *      - LEAKY_LLDP.
      */
-    rtk_api_ret_t rtl_leaky_vlan_set(rtk_leaky_type_t type, rtk_enable_t enable);
+    rtk_api_ret_t rtl_leaky_vlan_set(rtk_leaky_type_t type, rtk_enable_t enable)
+    {
+        return rtk_leaky_vlan_set(type, enable);
+    }
 
     /* Function Name:
      *      rtl_leaky_vlan_get
@@ -156,7 +159,10 @@ public:
      *      - LEAKY_CSSTP,
      *      - LEAKY_LLDP.
      */
-    rtk_api_ret_t rtl_leaky_vlan_get(rtk_leaky_type_t type, rtk_enable_t *pEnable);
+    rtk_api_ret_t rtl_leaky_vlan_get(rtk_leaky_type_t type, rtk_enable_t *pEnable)
+    {
+        return rtk_leaky_vlan_get(type, pEnable);
+    }
 
     /* Function Name:
      *      rtl_leaky_portIsolation_set
@@ -230,7 +236,10 @@ public:
      *      - LEAKY_CSSTP,
      *      - LEAKY_LLDP.
      */
-    rtk_api_ret_t rtl_leaky_portIsolation_set(rtk_leaky_type_t type, rtk_enable_t enable);
+    rtk_api_ret_t rtl_leaky_portIsolation_set(rtk_leaky_type_t type, rtk_enable_t enable)
+    {
+        return rtk_leaky_portIsolation_set(type, enable);
+    }
 
     /* Function Name:
      *      rtl_leaky_portIsolation_get
@@ -302,7 +311,10 @@ public:
      *      - LEAKY_CSSTP,
      *      - LEAKY_LLDP.
      */
-    rtk_api_ret_t rtl_leaky_portIsolation_get(rtk_leaky_type_t type, rtk_enable_t *pEnable);
+    rtk_api_ret_t rtl_leaky_portIsolation_get(rtk_leaky_type_t type, rtk_enable_t *pEnable)
+    {
+        return rtk_leaky_portIsolation_get(type, pEnable);
+    }
 };
 
 #endif

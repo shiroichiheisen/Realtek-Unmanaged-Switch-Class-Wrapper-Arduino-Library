@@ -33,7 +33,10 @@ public:
      *      The mirror port can only be set to one port and the TX and RX mirror ports
      *      should be identical.
      */
-    rtk_api_ret_t rtl_mirror_portBased_set(rtk_port_t mirroring_port, rtk_portmask_t *pMirrored_rx_portmask, rtk_portmask_t *pMirrored_tx_portmask);
+    rtk_api_ret_t rtl_mirror_portBased_set(rtk_port_t mirroring_port, rtk_portmask_t *pMirrored_rx_portmask, rtk_portmask_t *pMirrored_tx_portmask)
+    {
+        return rtk_mirror_portBased_set(mirroring_port, pMirrored_rx_portmask, pMirrored_tx_portmask);
+    }
 
     /* Function Name:
      *      rtl_mirror_portBased_get
@@ -53,7 +56,10 @@ public:
      * Note:
      *      The API is to get mirror function of source port and mirror port.
      */
-    rtk_api_ret_t rtl_mirror_portBased_get(rtk_port_t *pMirroring_port, rtk_portmask_t *pMirrored_rx_portmask, rtk_portmask_t *pMirrored_tx_portmask);
+    rtk_api_ret_t rtl_mirror_portBased_get(rtk_port_t *pMirroring_port, rtk_portmask_t *pMirrored_rx_portmask, rtk_portmask_t *pMirrored_tx_portmask)
+    {
+        return rtk_mirror_portBased_get(pMirroring_port, pMirrored_rx_portmask, pMirrored_tx_portmask);
+    }
 
     /* Function Name:
      *      rtl_mirror_portIso_set
@@ -71,7 +77,10 @@ public:
      * Note:
      *      The API is to set mirror isolation function that prevent normal forwarding packets to miror port.
      */
-    rtk_api_ret_t rtl_mirror_portIso_set(rtk_enable_t enable);
+    rtk_api_ret_t rtl_mirror_portIso_set(rtk_enable_t enable)
+    {
+        return rtk_mirror_portIso_set(enable);
+    }
 
     /* Function Name:
      *      rtl_mirror_portIso_get
@@ -89,7 +98,10 @@ public:
      * Note:
      *      The API is to get mirror isolation status.
      */
-    rtk_api_ret_t rtl_mirror_portIso_get(rtk_enable_t *pEnable);
+    rtk_api_ret_t rtl_mirror_portIso_get(rtk_enable_t *pEnable)
+    {
+        return rtk_mirror_portIso_get(pEnable);
+    }
 
     /* Function Name:
      *      rtl_mirror_vlanLeaky_set
@@ -108,7 +120,10 @@ public:
      * Note:
      *      The API is to set mirror VLAN leaky function forwarding packets to miror port.
      */
-    rtk_api_ret_t rtl_mirror_vlanLeaky_set(rtk_enable_t txenable, rtk_enable_t rxenable);
+    rtk_api_ret_t rtl_mirror_vlanLeaky_set(rtk_enable_t txenable, rtk_enable_t rxenable)
+    {
+        return rtk_mirror_vlanLeaky_set(txenable, rxenable);
+    }
 
     /* Function Name:
      *      rtl_mirror_vlanLeaky_get
@@ -127,7 +142,10 @@ public:
      * Note:
      *      The API is to get mirror VLAN leaky status.
      */
-    rtk_api_ret_t rtl_mirror_vlanLeaky_get(rtk_enable_t *pTxenable, rtk_enable_t *pRxenable);
+    rtk_api_ret_t rtl_mirror_vlanLeaky_get(rtk_enable_t *pTxenable, rtk_enable_t *pRxenable)
+    {
+        return rtk_mirror_vlanLeaky_get(pTxenable, pRxenable);
+    }
 
     /* Function Name:
      *      rtl_mirror_isolationLeaky_set
@@ -146,7 +164,10 @@ public:
      * Note:
      *      The API is to set mirror VLAN leaky function forwarding packets to miror port.
      */
-    rtk_api_ret_t rtl_mirror_isolationLeaky_set(rtk_enable_t txenable, rtk_enable_t rxenable);
+    rtk_api_ret_t rtl_mirror_isolationLeaky_set(rtk_enable_t txenable, rtk_enable_t rxenable)
+    {
+        return rtk_mirror_isolationLeaky_set(txenable, rxenable);
+    }
 
     /* Function Name:
      *      rtl_mirror_isolationLeaky_get
@@ -165,7 +186,10 @@ public:
      * Note:
      *      The API is to get mirror isolation leaky status.
      */
-    rtk_api_ret_t rtl_mirror_isolationLeaky_get(rtk_enable_t *pTxenable, rtk_enable_t *pRxenable);
+    rtk_api_ret_t rtl_mirror_isolationLeaky_get(rtk_enable_t *pTxenable, rtk_enable_t *pRxenable)
+    {
+        return rtk_mirror_isolationLeaky_get(pTxenable, pRxenable);
+    }
 
     /* Function Name:
      *      rtl_mirror_keep_set
@@ -187,7 +211,10 @@ public:
      *      - MIRROR_KEEP_ORIGINAL
      *      - MIRROR_KEEP_END
      */
-    rtk_api_ret_t rtl_mirror_keep_set(rtk_mirror_keep_t mode);
+    rtk_api_ret_t rtl_mirror_keep_set(rtk_mirror_keep_t mode)
+    {
+        return rtk_mirror_keep_set(mode);
+    }
 
     /* Function Name:
      *      rtl_mirror_keep_get
@@ -209,7 +236,10 @@ public:
      *      - MIRROR_KEEP_ORIGINAL
      *      - MIRROR_KEEP_END
      */
-    rtk_api_ret_t rtl_mirror_keep_get(rtk_mirror_keep_t *pMode);
+    rtk_api_ret_t rtl_mirror_keep_get(rtk_mirror_keep_t *pMode)
+    {
+        return rtk_mirror_keep_get(pMode);
+    }
 
     /* Function Name:
      *      rtl_mirror_override_set
@@ -230,7 +260,10 @@ public:
      *      This function control the output format when a port output
      *      normal forward & mirrored packet at the same time.
      */
-    rtk_api_ret_t rtl_mirror_override_set(rtk_enable_t rxMirror, rtk_enable_t txMirror, rtk_enable_t aclMirror);
+    rtk_api_ret_t rtl_mirror_override_set(rtk_enable_t rxMirror, rtk_enable_t txMirror, rtk_enable_t aclMirror)
+    {
+        return rtk_mirror_override_set(rxMirror, txMirror, aclMirror);
+    }
 
     /* Function Name:
      *      rtl_mirror_override_get
@@ -252,7 +285,10 @@ public:
      *      This function control the output format when a port output
      *      normal forward & mirrored packet at the same time.
      */
-    rtk_api_ret_t rtl_mirror_override_get(rtk_enable_t *pRxMirror, rtk_enable_t *pTxMirror, rtk_enable_t *pAclMirror);
+    rtk_api_ret_t rtl_mirror_override_get(rtk_enable_t *pRxMirror, rtk_enable_t *pTxMirror, rtk_enable_t *pAclMirror)
+    {
+        return rtk_mirror_override_get(pRxMirror, pTxMirror, pAclMirror);
+    }
 };
 
 #endif

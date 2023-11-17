@@ -30,7 +30,10 @@ public:
      *      using it. And It will set a default VLAN(vid 1) including all ports and set
      *      all ports PVID to the default VLAN.
      */
-    rtk_api_ret_t rtl_vlan_init();
+    rtk_api_ret_t rtl_vlan_init()
+    {
+        return rtk_vlan_init();
+    }
 
     /* Function Name:
      *      rtl_vlan_set
@@ -52,7 +55,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_vlan_set(rtk_vlan_t vid, rtk_vlan_cfg_t *pVlanCfg);
+    rtk_api_ret_t rtl_vlan_set(rtk_vlan_t vid, rtk_vlan_cfg_t *pVlanCfg)
+    {
+        return rtk_vlan_set(vid, pVlanCfg);
+    }
 
     /* Function Name:
      *      rtl_vlan_get
@@ -71,7 +77,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_vlan_get(rtk_vlan_t vid, rtk_vlan_cfg_t *pVlanCfg);
+    rtk_api_ret_t rtl_vlan_get(rtk_vlan_t vid, rtk_vlan_cfg_t *pVlanCfg)
+    {
+        return rtk_vlan_get(vid, pVlanCfg);
+    }
 
     /* Function Name:
      *      rtl_vlan_egrFilterEnable_set
@@ -89,7 +98,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_vlan_egrFilterEnable_set(rtk_enable_t egrFilter);
+    rtk_api_ret_t rtl_vlan_egrFilterEnable_set(rtk_enable_t egrFilter)
+    {
+        return rtk_vlan_egrFilterEnable_set(egrFilter);
+    }
 
     /* Function Name:
      *      rtl_vlan_egrFilterEnable_get
@@ -107,7 +119,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_vlan_egrFilterEnable_get(rtk_enable_t *pEgrFilter);
+    rtk_api_ret_t rtl_vlan_egrFilterEnable_get(rtk_enable_t *pEgrFilter)
+    {
+        return rtk_vlan_egrFilterEnable_get(pEgrFilter);
+    }
 
     /* Function Name:
      *      rtl_vlan_mbrCfg_set
@@ -127,7 +142,10 @@ public:
      * Note:
      *     Set a VLAN Member Configuration entry by index.
      */
-    rtk_api_ret_t rtl_vlan_mbrCfg_set(rtk_uint32 idx, rtk_vlan_mbrcfg_t *pMbrcfg);
+    rtk_api_ret_t rtl_vlan_mbrCfg_set(rtk_uint32 idx, rtk_vlan_mbrcfg_t *pMbrcfg)
+    {
+        return rtk_vlan_mbrCfg_set(idx, pMbrcfg);
+    }
 
     /* Function Name:
      *      rtl_vlan_mbrCfg_get
@@ -146,7 +164,10 @@ public:
      * Note:
      *     Get a VLAN Member Configuration entry by index.
      */
-    rtk_api_ret_t rtl_vlan_mbrCfg_get(rtk_uint32 idx, rtk_vlan_mbrcfg_t *pMbrcfg);
+    rtk_api_ret_t rtl_vlan_mbrCfg_get(rtk_uint32 idx, rtk_vlan_mbrcfg_t *pMbrcfg)
+    {
+        return rtk_vlan_mbrCfg_get(idx, pMbrcfg);
+    }
 
     /* Function Name:
      *     rtl_vlan_portPvid_set
@@ -170,7 +191,10 @@ public:
      *       The API is used for Port-based VLAN. The untagged frame received from the
      *       port will be classified to the specified VLAN and assigned to the specified priority.
      */
-    rtk_api_ret_t rtl_vlan_portPvid_set(rtk_port_t port, rtk_vlan_t pvid, rtk_pri_t priority);
+    rtk_api_ret_t rtl_vlan_portPvid_set(rtk_port_t port, rtk_vlan_t pvid, rtk_pri_t priority)
+    {
+        return rtk_vlan_portPvid_set(port, pvid, priority);
+    }
 
     /* Function Name:
      *      rtl_vlan_portPvid_get
@@ -190,7 +214,10 @@ public:
      * Note:
      *     The API can get the PVID and 802.1p priority for the PVID of Port-based VLAN.
      */
-    rtk_api_ret_t rtl_vlan_portPvid_get(rtk_port_t port, rtk_vlan_t *pPvid, rtk_pri_t *pPriority);
+    rtk_api_ret_t rtl_vlan_portPvid_get(rtk_port_t port, rtk_vlan_t *pPvid, rtk_pri_t *pPriority)
+    {
+        return rtk_vlan_portPvid_get(port, pPvid, pPriority);
+    }
 
     /* Function Name:
      *      rtl_vlan_portIgrFilterEnable_set
@@ -214,7 +241,10 @@ public:
      *      While VLAN function is enabled, ASIC will decide VLAN ID for each received frame and get belonged member
      *      ports from VLAN table. If received port is not belonged to VLAN member ports, ASIC will drop received frame if VLAN ingress function is enabled.
      */
-    rtk_api_ret_t rtl_vlan_portIgrFilterEnable_set(rtk_port_t port, rtk_enable_t igr_filter);
+    rtk_api_ret_t rtl_vlan_portIgrFilterEnable_set(rtk_port_t port, rtk_enable_t igr_filter)
+    {
+        return rtk_vlan_portIgrFilterEnable_set(port, igr_filter);
+    }
 
     /* Function Name:
      *      rtl_vlan_portIgrFilterEnable_get
@@ -236,7 +266,10 @@ public:
      *     - DISABLED
      *     - ENABLED
      */
-    rtk_api_ret_t rtl_vlan_portIgrFilterEnable_get(rtk_port_t port, rtk_enable_t *pIgr_filter);
+    rtk_api_ret_t rtl_vlan_portIgrFilterEnable_get(rtk_port_t port, rtk_enable_t *pIgr_filter)
+    {
+        return rtk_vlan_portIgrFilterEnable_get(port, pIgr_filter);
+    }
 
     /* Function Name:
      *      rtl_vlan_portAcceptFrameType_set
@@ -260,7 +293,10 @@ public:
      *      - ACCEPT_FRAME_TYPE_TAG_ONLY
      *      - ACCEPT_FRAME_TYPE_UNTAG_ONLY
      */
-    rtk_api_ret_t rtl_vlan_portAcceptFrameType_set(rtk_port_t port, rtk_vlan_acceptFrameType_t accept_frame_type);
+    rtk_api_ret_t rtl_vlan_portAcceptFrameType_set(rtk_port_t port, rtk_vlan_acceptFrameType_t accept_frame_type)
+    {
+        return rtk_vlan_portAcceptFrameType_set(port, accept_frame_type);
+    }
 
     /* Function Name:
      *      rtl_vlan_portAcceptFrameType_get
@@ -283,7 +319,10 @@ public:
      *     - ACCEPT_FRAME_TYPE_TAG_ONLY
      *     - ACCEPT_FRAME_TYPE_UNTAG_ONLY
      */
-    rtk_api_ret_t rtl_vlan_portAcceptFrameType_get(rtk_port_t port, rtk_vlan_acceptFrameType_t *pAccept_frame_type);
+    rtk_api_ret_t rtl_vlan_portAcceptFrameType_get(rtk_port_t port, rtk_vlan_acceptFrameType_t *pAccept_frame_type)
+    {
+        return rtk_vlan_portAcceptFrameType_get(port, pAccept_frame_type);
+    }
 
     /* Function Name:
      *      rtl_vlan_tagMode_set
@@ -308,7 +347,10 @@ public:
      *      - VLAN_TAG_MODE_PRI.
      *      - VLAN_TAG_MODE_REAL_KEEP_FORMAT,
      */
-    rtk_api_ret_t rtl_vlan_tagMode_set(rtk_port_t port, rtk_vlan_tagMode_t tag_mode);
+    rtk_api_ret_t rtl_vlan_tagMode_set(rtk_port_t port, rtk_vlan_tagMode_t tag_mode)
+    {
+        return rtk_vlan_tagMode_set(port, tag_mode);
+    }
 
     /* Function Name:
      *      rtl_vlan_tagMode_get
@@ -331,7 +373,10 @@ public:
      *      - VLAN_TAG_MODE_PRI.
      *      - VLAN_TAG_MODE_REAL_KEEP_FORMAT,
      */
-    rtk_api_ret_t rtl_vlan_tagMode_get(rtk_port_t port, rtk_vlan_tagMode_t *pTag_mode);
+    rtk_api_ret_t rtl_vlan_tagMode_get(rtk_port_t port, rtk_vlan_tagMode_t *pTag_mode)
+    {
+        return rtk_vlan_tagMode_get(port, pTag_mode);
+    }
 
     /* Function Name:
      *      rtl_vlan_transparent_set
@@ -351,7 +396,10 @@ public:
      * Note:
      *      None.
      */
-    rtk_api_ret_t rtl_vlan_transparent_set(rtk_port_t egr_port, rtk_portmask_t *pIgr_pmask);
+    rtk_api_ret_t rtl_vlan_transparent_set(rtk_port_t egr_port, rtk_portmask_t *pIgr_pmask)
+    {
+        return rtk_vlan_transparent_set(egr_port, pIgr_pmask);
+    }
 
     /* Function Name:
      *      rtl_vlan_transparent_get
@@ -370,7 +418,10 @@ public:
      * Note:
      *      None.
      */
-    rtk_api_ret_t rtl_vlan_transparent_get(rtk_port_t egr_port, rtk_portmask_t *pIgr_pmask);
+    rtk_api_ret_t rtl_vlan_transparent_get(rtk_port_t egr_port, rtk_portmask_t *pIgr_pmask)
+    {
+        return rtk_vlan_transparent_get(egr_port, pIgr_pmask);
+    }
 
     /* Function Name:
      *      rtl_vlan_keep_set
@@ -390,7 +441,10 @@ public:
      * Note:
      *      None.
      */
-    rtk_api_ret_t rtl_vlan_keep_set(rtk_port_t egr_port, rtk_portmask_t *pIgr_pmask);
+    rtk_api_ret_t rtl_vlan_keep_set(rtk_port_t egr_port, rtk_portmask_t *pIgr_pmask)
+    {
+        return rtk_vlan_keep_set(egr_port, pIgr_pmask);
+    }
 
     /* Function Name:
      *      rtl_vlan_keep_get
@@ -409,7 +463,10 @@ public:
      * Note:
      *      None.
      */
-    rtk_api_ret_t rtl_vlan_keep_get(rtk_port_t egr_port, rtk_portmask_t *pIgr_pmask);
+    rtk_api_ret_t rtl_vlan_keep_get(rtk_port_t egr_port, rtk_portmask_t *pIgr_pmask)
+    {
+        return rtk_vlan_keep_get(egr_port, pIgr_pmask);
+    }
 
     /* Function Name:
      *      rtl_vlan_stg_set
@@ -430,7 +487,10 @@ public:
      * Note:
      *      The API can set spanning tree group instance of the vlan to the specified device.
      */
-    rtk_api_ret_t rtl_vlan_stg_set(rtk_vlan_t vid, rtk_stp_msti_id_t stg);
+    rtk_api_ret_t rtl_vlan_stg_set(rtk_vlan_t vid, rtk_stp_msti_id_t stg)
+    {
+        return rtk_vlan_stg_set(vid, stg);
+    }
 
     /* Function Name:
      *      rtl_vlan_stg_get
@@ -449,7 +509,10 @@ public:
      * Note:
      *      The API can get spanning tree group instance of the vlan to the specified device.
      */
-    rtk_api_ret_t rtl_vlan_stg_get(rtk_vlan_t vid, rtk_stp_msti_id_t *pStg);
+    rtk_api_ret_t rtl_vlan_stg_get(rtk_vlan_t vid, rtk_stp_msti_id_t *pStg)
+    {
+        return rtk_vlan_stg_get(vid, pStg);
+    }
 
     /* Function Name:
      *      rtl_vlan_protoAndPortBasedVlan_add
@@ -476,7 +539,10 @@ public:
      *      - FRAME_TYPE_RFC1042
      *      - FRAME_TYPE_LLCOTHER
      */
-    rtk_api_ret_t rtl_vlan_protoAndPortBasedVlan_add(rtk_port_t port, rtk_vlan_protoAndPortInfo_t *pInfo);
+    rtk_api_ret_t rtl_vlan_protoAndPortBasedVlan_add(rtk_port_t port, rtk_vlan_protoAndPortInfo_t *pInfo)
+    {
+        return rtk_vlan_protoAndPortBasedVlan_add(port, pInfo);
+    }
 
     /* Function Name:
      *      rtl_vlan_protoAndPortBasedVlan_get
@@ -502,7 +568,10 @@ public:
      *      - FRAME_TYPE_RFC1042
      *      - FRAME_TYPE_LLCOTHER
      */
-    rtk_api_ret_t rtl_vlan_protoAndPortBasedVlan_get(rtk_port_t port, rtk_vlan_proto_type_t proto_type, rtk_vlan_protoVlan_frameType_t frame_type, rtk_vlan_protoAndPortInfo_t *pInfo);
+    rtk_api_ret_t rtl_vlan_protoAndPortBasedVlan_get(rtk_port_t port, rtk_vlan_proto_type_t proto_type, rtk_vlan_protoVlan_frameType_t frame_type, rtk_vlan_protoAndPortInfo_t *pInfo)
+    {
+        return rtk_vlan_protoAndPortBasedVlan_get(port, proto_type, frame_type, pInfo);
+    }
 
     /* Function Name:
      *      rtl_vlan_protoAndPortBasedVlan_del
@@ -528,7 +597,10 @@ public:
      *      - FRAME_TYPE_RFC1042
      *      - FRAME_TYPE_LLCOTHER
      */
-    rtk_api_ret_t rtl_vlan_protoAndPortBasedVlan_del(rtk_port_t port, rtk_vlan_proto_type_t proto_type, rtk_vlan_protoVlan_frameType_t frame_type);
+    rtk_api_ret_t rtl_vlan_protoAndPortBasedVlan_del(rtk_port_t port, rtk_vlan_proto_type_t proto_type, rtk_vlan_protoVlan_frameType_t frame_type)
+    {
+        return rtk_vlan_protoAndPortBasedVlan_del(port, proto_type, frame_type);
+    }
 
     /* Function Name:
      *      rtl_vlan_protoAndPortBasedVlan_delAll
@@ -548,7 +620,10 @@ public:
      *     The incoming packet which match the protocol-and-port-based vlan will use the configure vid for ingress pipeline
      *     Delete all flow table protocol-and-port-based vlan entries.
      */
-    rtk_api_ret_t rtl_vlan_protoAndPortBasedVlan_delAll(rtk_port_t port);
+    rtk_api_ret_t rtl_vlan_protoAndPortBasedVlan_delAll(rtk_port_t port)
+    {
+        return rtk_vlan_protoAndPortBasedVlan_delAll(port);
+    }
 
     /* Function Name:
      *      rtl_vlan_portFid_set
@@ -571,7 +646,10 @@ public:
      *      The API can set port-based filtering database. If the function is enabled, all input
      *      packets will be assigned to the port-based fid regardless vlan tag.
      */
-    rtk_api_ret_t rtl_vlan_portFid_set(rtk_port_t port, rtk_enable_t enable, rtk_fid_t fid);
+    rtk_api_ret_t rtl_vlan_portFid_set(rtk_port_t port, rtk_enable_t enable, rtk_fid_t fid)
+    {
+        return rtk_vlan_portFid_set(port, enable, fid);
+    }
 
     /* Function Name:
      *      rtl_vlan_portFid_get
@@ -592,7 +670,10 @@ public:
      *      The API can get port-based filtering database status. If the function is enabled, all input
      *      packets will be assigned to the port-based fid regardless vlan tag.
      */
-    rtk_api_ret_t rtl_vlan_portFid_get(rtk_port_t port, rtk_enable_t *pEnable, rtk_fid_t *pFid);
+    rtk_api_ret_t rtl_vlan_portFid_get(rtk_port_t port, rtk_enable_t *pEnable, rtk_fid_t *pFid)
+    {
+        return rtk_vlan_portFid_get(port, pEnable, pFid);
+    }
 
     /* Function Name:
      *      rtl_vlan_UntagDscpPriorityEnable_set
@@ -610,7 +691,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_vlan_UntagDscpPriorityEnable_set(rtk_enable_t enable);
+    rtk_api_ret_t rtl_vlan_UntagDscpPriorityEnable_set(rtk_enable_t enable)
+    {
+        return rtk_vlan_UntagDscpPriorityEnable_set(enable);
+    }
 
     /* Function Name:
      *      rtl_vlan_UntagDscpPriorityEnable_get
@@ -628,7 +712,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_vlan_UntagDscpPriorityEnable_get(rtk_enable_t *pEnable);
+    rtk_api_ret_t rtl_vlan_UntagDscpPriorityEnable_get(rtk_enable_t *pEnable)
+    {
+        return rtk_vlan_UntagDscpPriorityEnable_get(pEnable);
+    }
 
     /*Spanning Tree*/
     /* Function Name:
@@ -656,7 +743,10 @@ public:
      *      - STP_STATE_LEARNING
      *      - STP_STATE_FORWARDING
      */
-    rtk_api_ret_t rtl_stp_mstpState_set(rtk_stp_msti_id_t msti, rtk_port_t port, rtk_stp_state_t stp_state);
+    rtk_api_ret_t rtl_stp_mstpState_set(rtk_stp_msti_id_t msti, rtk_port_t port, rtk_stp_state_t stp_state)
+    {
+        return rtk_stp_mstpState_set(msti, port, stp_state);
+    }
 
     /* Function Name:
      *      rtl_stp_mstpState_get
@@ -681,7 +771,10 @@ public:
      *      - STP_STATE_LEARNING
      *      - STP_STATE_FORWARDING
      */
-    rtk_api_ret_t rtl_stp_mstpState_get(rtk_stp_msti_id_t msti, rtk_port_t port, rtk_stp_state_t *pStp_state);
+    rtk_api_ret_t rtl_stp_mstpState_get(rtk_stp_msti_id_t msti, rtk_port_t port, rtk_stp_state_t *pStp_state)
+    {
+        return rtk_stp_mstpState_get(msti, port, pStp_state);
+    }
 
     /* Function Name:
      *      rtl_vlan_checkAndCreateMbr
@@ -701,7 +794,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_vlan_checkAndCreateMbr(rtk_vlan_t vid, rtk_uint32 *pIndex);
+    rtk_api_ret_t rtl_vlan_checkAndCreateMbr(rtk_vlan_t vid, rtk_uint32 *pIndex)
+    {
+        return rtk_vlan_checkAndCreateMbr(vid, pIndex);
+    }
 
     /* Function Name:
      *      rtl_vlan_reservedVidAction_set
@@ -720,7 +816,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_vlan_reservedVidAction_set(rtk_vlan_resVidAction_t action_vid0, rtk_vlan_resVidAction_t action_vid4095);
+    rtk_api_ret_t rtl_vlan_reservedVidAction_set(rtk_vlan_resVidAction_t action_vid0, rtk_vlan_resVidAction_t action_vid4095)
+    {
+        return rtk_vlan_reservedVidAction_set(action_vid0, action_vid4095);
+    }
 
     /* Function Name:
      *      rtl_vlan_reservedVidAction_get
@@ -739,7 +838,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_vlan_reservedVidAction_get(rtk_vlan_resVidAction_t *pAction_vid0, rtk_vlan_resVidAction_t *pAction_vid4095);
+    rtk_api_ret_t rtl_vlan_reservedVidAction_get(rtk_vlan_resVidAction_t *pAction_vid0, rtk_vlan_resVidAction_t *pAction_vid4095)
+    {
+        return rtk_vlan_reservedVidAction_get(pAction_vid0, pAction_vid4095);
+    }
 
     /* Function Name:
      *      rtl_vlan_realKeepRemarkEnable_set
@@ -757,7 +859,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_vlan_realKeepRemarkEnable_set(rtk_enable_t enabled);
+    rtk_api_ret_t rtl_vlan_realKeepRemarkEnable_set(rtk_enable_t enabled)
+    {
+        return rtk_vlan_realKeepRemarkEnable_set(enabled);
+    }
 
     /* Function Name:
      *      rtl_vlan_realKeepRemarkEnable_get
@@ -775,7 +880,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_vlan_realKeepRemarkEnable_get(rtk_enable_t *pEnabled);
+    rtk_api_ret_t rtl_vlan_realKeepRemarkEnable_get(rtk_enable_t *pEnabled)
+    {
+        return rtk_vlan_realKeepRemarkEnable_get(pEnabled);
+    }
 
     /* Function Name:
      *      rtl_vlan_reset
@@ -793,9 +901,21 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_vlan_reset();
+    rtk_api_ret_t rtl_vlan_reset()
+    {
+        return rtk_vlan_reset();
+    }
 
-    int32_t clearVlan(uint16_t vlanId)
+    /**
+     * @brief Clear VLAN configuration for a specific VLAN ID.
+     *
+     * This function will clear VLAN configuration for a specific VLAN ID.
+     *
+     * @param vlanId The VLAN ID to be cleared (0~4095) uint16_t.
+     *
+     * @return RT_ERR_OK if Success.
+     */
+    rtk_api_ret_t clearVlan(uint16_t vlanId)
     {
         rtk_vlan_cfg_t vlan1;
         memset(&vlan1, 0x00, sizeof(rtk_vlan_cfg_t));

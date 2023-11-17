@@ -28,7 +28,10 @@ public:
      *      Ether type of S-tag in 802.1ad is 0x88a8 and there are existed ether type 0x9100 and 0x9200 for Q-in-Q SLAN design.
      *      User can set mathced ether type as service provider supported protocol.
      */
-    rtk_api_ret_t rtl_svlan_init();
+    rtk_api_ret_t rtl_svlan_init()
+    {
+        return rtk_svlan_init();
+    }
 
     /* Function Name:
      *      rtl_svlan_servicePort_add
@@ -48,7 +51,10 @@ public:
      *      This API is setting which port is connected to provider switch. All frames receiving from this port must
      *      contain accept SVID in S-tag field.
      */
-    rtk_api_ret_t rtl_svlan_servicePort_add(rtk_port_t port);
+    rtk_api_ret_t rtl_svlan_servicePort_add(rtk_port_t port)
+    {
+        return rtk_svlan_servicePort_add(port);
+    }
 
     /* Function Name:
      *      rtl_svlan_servicePort_get
@@ -66,7 +72,10 @@ public:
      *      This API is setting which port is connected to provider switch. All frames receiving from this port must
      *      contain accept SVID in S-tag field.
      */
-    rtk_api_ret_t rtl_svlan_servicePort_get(rtk_portmask_t *pSvlan_portmask);
+    rtk_api_ret_t rtl_svlan_servicePort_get(rtk_portmask_t *pSvlan_portmask)
+    {
+        return rtk_svlan_servicePort_get(pSvlan_portmask);
+    }
 
     /* Function Name:
      *      rtl_svlan_servicePort_del
@@ -84,7 +93,10 @@ public:
      * Note:
      *      This API is removing SVLAN service port in the specified device.
      */
-    rtk_api_ret_t rtl_svlan_servicePort_del(rtk_port_t port);
+    rtk_api_ret_t rtl_svlan_servicePort_del(rtk_port_t port)
+    {
+        return rtk_svlan_servicePort_del(port);
+    }
 
     /* Function Name:
      *      rtl_svlan_tpidEntry_set
@@ -103,7 +115,10 @@ public:
      *      Ether type of S-tag in 802.1ad is 0x88a8 and there are existed ether type 0x9100 and 0x9200 for Q-in-Q SLAN design.
      *      User can set mathced ether type as service provider supported protocol.
      */
-    rtk_api_ret_t rtl_svlan_tpidEntry_set(rtk_uint32 svlan_tag_id);
+    rtk_api_ret_t rtl_svlan_tpidEntry_set(rtk_uint32 svlan_tag_id)
+    {
+        return rtk_svlan_tpidEntry_set(svlan_tag_id);
+    }
 
     /* Function Name:
      *      rtl_svlan_tpidEntry_get
@@ -121,7 +136,10 @@ public:
      *      This API is setting which port is connected to provider switch. All frames receiving from this port must
      *      contain accept SVID in S-tag field.
      */
-    rtk_api_ret_t rtl_svlan_tpidEntry_get(rtk_uint32 *pSvlan_tag_id);
+    rtk_api_ret_t rtl_svlan_tpidEntry_get(rtk_uint32 *pSvlan_tag_id)
+    {
+        return rtk_svlan_tpidEntry_get(pSvlan_tag_id);
+    }
 
     /* Function Name:
      *      rtl_svlan_priorityRef_set
@@ -144,7 +162,10 @@ public:
      *      - REF_SVLAN_PRI,
      *      - REF_PB_PRI.
      */
-    rtk_api_ret_t rtl_svlan_priorityRef_set(rtk_svlan_pri_ref_t ref);
+    rtk_api_ret_t rtl_svlan_priorityRef_set(rtk_svlan_pri_ref_t ref)
+    {
+        return rtk_svlan_priorityRef_set(ref);
+    }
 
     /* Function Name:
      *      rtl_svlan_priorityRef_get
@@ -166,7 +187,10 @@ public:
      *      - REF_SVLAN_PRI,
      *      - REF_PB_PRI
      */
-    rtk_api_ret_t rtl_svlan_priorityRef_get(rtk_svlan_pri_ref_t *pRef);
+    rtk_api_ret_t rtl_svlan_priorityRef_get(rtk_svlan_pri_ref_t *pRef)
+    {
+        return rtk_svlan_priorityRef_get(pRef);
+    }
 
     /* Function Name:
      *      rtl_svlan_memberPortEntry_set
@@ -193,7 +217,10 @@ public:
      *      - rtk_svlan_memberCfg_t->fid is filtering database of SVLAN member configuration.
      *      - rtk_svlan_memberCfg_t->priority is priority of SVLAN member configuration.
      */
-    rtk_api_ret_t rtl_svlan_memberPortEntry_set(rtk_uint32 svid_idx, rtk_svlan_memberCfg_t *psvlan_cfg);
+    rtk_api_ret_t rtl_svlan_memberPortEntry_set(rtk_uint32 svid_idx, rtk_svlan_memberCfg_t *psvlan_cfg)
+    {
+        return rtk_svlan_memberPortEntry_set(svid_idx, psvlan_cfg);
+    }
 
     /* Function Name:
      *      rtl_svlan_memberPortEntry_get
@@ -213,7 +240,10 @@ public:
      *      The API can get system 64 accepted s-tag frame format. Only 64 SVID S-tag frame will be accpeted
      *      to receiving from uplink ports. Other SVID S-tag frame or S-untagged frame will be droped.
      */
-    rtk_api_ret_t rtl_svlan_memberPortEntry_get(rtk_uint32 svid_idx, rtk_svlan_memberCfg_t *pSvlan_cfg);
+    rtk_api_ret_t rtl_svlan_memberPortEntry_get(rtk_uint32 svid_idx, rtk_svlan_memberCfg_t *pSvlan_cfg)
+    {
+        return rtk_svlan_memberPortEntry_get(svid_idx, pSvlan_cfg);
+    }
 
     /* Function Name:
      *      rtl_svlan_memberPortEntry_adv_set
@@ -239,7 +269,10 @@ public:
      *      - rtk_svlan_memberCfg_t->fid is filtering database of SVLAN member configuration.
      *      - rtk_svlan_memberCfg_t->priority is priority of SVLAN member configuration.
      */
-    rtk_api_ret_t rtl_svlan_memberPortEntry_adv_set(rtk_uint32 idx, rtk_svlan_memberCfg_t *pSvlan_cfg);
+    rtk_api_ret_t rtl_svlan_memberPortEntry_adv_set(rtk_uint32 idx, rtk_svlan_memberCfg_t *pSvlan_cfg)
+    {
+        return rtk_svlan_memberPortEntry_adv_set(idx, pSvlan_cfg);
+    }
 
     /* Function Name:
      *      rtl_svlan_memberPortEntry_adv_get
@@ -259,7 +292,10 @@ public:
      *      The API can get system 64 accepted s-tag frame format. Only 64 SVID S-tag frame will be accpeted
      *      to receiving from uplink ports. Other SVID S-tag frame or S-untagged frame will be droped.
      */
-    rtk_api_ret_t rtl_svlan_memberPortEntry_adv_get(rtk_uint32 idx, rtk_svlan_memberCfg_t *pSvlan_cfg);
+    rtk_api_ret_t rtl_svlan_memberPortEntry_adv_get(rtk_uint32 idx, rtk_svlan_memberCfg_t *pSvlan_cfg)
+    {
+        return rtk_svlan_memberPortEntry_adv_get(idx, pSvlan_cfg);
+    }
 
     /* Function Name:
      *      rtl_svlan_defaultSvlan_set
@@ -281,7 +317,10 @@ public:
      *      The API can set port n S-tag format index while receiving frame from port n
      *      is transmit through uplink port with s-tag field
      */
-    rtk_api_ret_t rtl_svlan_defaultSvlan_set(rtk_port_t port, rtk_vlan_t svid);
+    rtk_api_ret_t rtl_svlan_defaultSvlan_set(rtk_port_t port, rtk_vlan_t svid)
+    {
+        return rtk_svlan_defaultSvlan_set(port, svid);
+    }
 
     /* Function Name:
      *      rtl_svlan_defaultSvlan_get
@@ -300,7 +339,10 @@ public:
      *      The API can get port n S-tag format index while receiving frame from port n
      *      is transmit through uplink port with s-tag field
      */
-    rtk_api_ret_t rtl_svlan_defaultSvlan_get(rtk_port_t port, rtk_vlan_t *pSvid);
+    rtk_api_ret_t rtl_svlan_defaultSvlan_get(rtk_port_t port, rtk_vlan_t *pSvid)
+    {
+        return rtk_svlan_defaultSvlan_get(port, pSvid);
+    }
 
     /* Function Name:
      *      rtl_svlan_c2s_add
@@ -325,7 +367,10 @@ public:
      *      The API can set system C2S configuration. ASIC will check upstream's VID and assign related
      *      SVID to mathed packet. There are 128 SVLAN C2S configurations.
      */
-    rtk_api_ret_t rtl_svlan_c2s_add(rtk_vlan_t vid, rtk_port_t src_port, rtk_vlan_t svid);
+    rtk_api_ret_t rtl_svlan_c2s_add(rtk_vlan_t vid, rtk_port_t src_port, rtk_vlan_t svid)
+    {
+        return rtk_svlan_c2s_add(vid, src_port, svid);
+    }
 
     /* Function Name:
      *      rtl_svlan_c2s_del
@@ -347,7 +392,10 @@ public:
      * Note:
      *      The API can delete system C2S configuration. There are 128 SVLAN C2S configurations.
      */
-    rtk_api_ret_t rtl_svlan_c2s_del(rtk_vlan_t vid, rtk_port_t src_port);
+    rtk_api_ret_t rtl_svlan_c2s_del(rtk_vlan_t vid, rtk_port_t src_port)
+    {
+        return rtk_svlan_c2s_del(vid, src_port);
+    }
 
     /* Function Name:
      *      rtl_svlan_c2s_get
@@ -368,7 +416,10 @@ public:
      * Note:
      *     The API can get system C2S configuration. There are 128 SVLAN C2S configurations.
      */
-    rtk_api_ret_t rtl_svlan_c2s_get(rtk_vlan_t vid, rtk_port_t src_port, rtk_vlan_t *pSvid);
+    rtk_api_ret_t rtl_svlan_c2s_get(rtk_vlan_t vid, rtk_port_t src_port, rtk_vlan_t *pSvid)
+    {
+        return rtk_svlan_c2s_get(vid, src_port, pSvid);
+    }
 
     /* Function Name:
      *      rtl_svlan_untag_action_set
@@ -392,7 +443,10 @@ public:
      *      to the un-stag is also supported by this API. The parameter of svid is
      *      only referenced when the action is set to UNTAG_ASSIGN
      */
-    rtk_api_ret_t rtl_svlan_untag_action_set(rtk_svlan_untag_action_t action, rtk_vlan_t svid);
+    rtk_api_ret_t rtl_svlan_untag_action_set(rtk_svlan_untag_action_t action, rtk_vlan_t svid)
+    {
+        return rtk_svlan_untag_action_set(action, svid);
+    }
 
     /* Function Name:
      *      rtl_svlan_untag_action_get
@@ -416,7 +470,10 @@ public:
      *      to the un-stag is also retrieved by this API. The parameter pSvid is
      *      only refernced when the action is UNTAG_ASSIGN
      */
-    rtk_api_ret_t rtl_svlan_untag_action_get(rtk_svlan_untag_action_t *pAction, rtk_vlan_t *pSvid);
+    rtk_api_ret_t rtl_svlan_untag_action_get(rtk_svlan_untag_action_t *pAction, rtk_vlan_t *pSvid)
+    {
+        return rtk_svlan_untag_action_get(pAction, pSvid);
+    }
 
     /* Function Name:
      *      rtl_svlan_unmatch_action_set
@@ -440,7 +497,10 @@ public:
      *      to the un-match is also supported by this API. The parameter od svid is
      *      only refernced when the action is set to UNMATCH_ASSIGN
      */
-    rtk_api_ret_t rtl_svlan_unmatch_action_set(rtk_svlan_unmatch_action_t action, rtk_vlan_t svid);
+    rtk_api_ret_t rtl_svlan_unmatch_action_set(rtk_svlan_unmatch_action_t action, rtk_vlan_t svid)
+    {
+        return rtk_svlan_unmatch_action_set(action, svid);
+    }
 
     /* Function Name:
      *      rtl_svlan_unmatch_action_get
@@ -464,7 +524,10 @@ public:
      *      to the un-match is also retrieved by this API. The parameter pSvid is
      *      only refernced when the action is UNMATCH_ASSIGN
      */
-    rtk_api_ret_t rtl_svlan_unmatch_action_get(rtk_svlan_unmatch_action_t *pAction, rtk_vlan_t *pSvid);
+    rtk_api_ret_t rtl_svlan_unmatch_action_get(rtk_svlan_unmatch_action_t *pAction, rtk_vlan_t *pSvid)
+    {
+        return rtk_svlan_unmatch_action_get(pAction, pSvid);
+    }
 
     /* Function Name:
      *      rtl_svlan_dmac_vidsel_set
@@ -486,7 +549,10 @@ public:
      * Note:
      *      This API can set DMAC CVID Selection state
      */
-    rtk_api_ret_t rtl_svlan_dmac_vidsel_set(rtk_port_t port, rtk_enable_t enable);
+    rtk_api_ret_t rtl_svlan_dmac_vidsel_set(rtk_port_t port, rtk_enable_t enable)
+    {
+        return rtk_svlan_dmac_vidsel_set(port, enable);
+    }
 
     /* Function Name:
      *      rtl_svlan_dmac_vidsel_get
@@ -507,7 +573,10 @@ public:
      * Note:
      *      This API can get DMAC CVID Selection state
      */
-    rtk_api_ret_t rtl_svlan_dmac_vidsel_get(rtk_port_t port, rtk_enable_t *pEnable);
+    rtk_api_ret_t rtl_svlan_dmac_vidsel_get(rtk_port_t port, rtk_enable_t *pEnable)
+    {
+        return rtk_svlan_dmac_vidsel_get(port, pEnable);
+    }
 
     /* Function Name:
      *      rtl_svlan_ipmc2s_add
@@ -532,7 +601,10 @@ public:
      *      packet and DIP is matched MC2S configuration, ASIC will assign egress SVID to the packet.
      *      There are 32 SVLAN multicast configurations for IP and L2 multicast.
      */
-    rtk_api_ret_t rtl_svlan_ipmc2s_add(ipaddr_t ipmc, ipaddr_t ipmcMsk, rtk_vlan_t svid);
+    rtk_api_ret_t rtl_svlan_ipmc2s_add(ipaddr_t ipmc, ipaddr_t ipmcMsk, rtk_vlan_t svid)
+    {
+        return rtk_svlan_ipmc2s_add(ipmc, ipmcMsk, svid);
+    }
 
     /* Function Name:
      *      rtl_svlan_ipmc2s_del
@@ -552,7 +624,10 @@ public:
      * Note:
      *      The API can delete IP mutlicast to SVID configuration. There are 32 SVLAN multicast configurations for IP and L2 multicast.
      */
-    rtk_api_ret_t rtl_svlan_ipmc2s_del(ipaddr_t ipmc, ipaddr_t ipmcMsk);
+    rtk_api_ret_t rtl_svlan_ipmc2s_del(ipaddr_t ipmc, ipaddr_t ipmcMsk)
+    {
+        return rtk_svlan_ipmc2s_del(ipmc, ipmcMsk);
+    }
 
     /* Function Name:
      *      rtl_svlan_ipmc2s_get
@@ -572,7 +647,10 @@ public:
      * Note:
      *      The API can get IP mutlicast to SVID configuration. There are 32 SVLAN multicast configurations for IP and L2 multicast.
      */
-    rtk_api_ret_t rtl_svlan_ipmc2s_get(ipaddr_t ipmc, ipaddr_t ipmcMsk, rtk_vlan_t *pSvid);
+    rtk_api_ret_t rtl_svlan_ipmc2s_get(ipaddr_t ipmc, ipaddr_t ipmcMsk, rtk_vlan_t *pSvid)
+    {
+        return rtk_svlan_ipmc2s_get(ipmc, ipmcMsk, pSvid);
+    }
 
     /* Function Name:
      *      rtl_svlan_l2mc2s_add
@@ -597,7 +675,10 @@ public:
      *      packet and DMAC is matched, ASIC will assign egress SVID to the packet. There are 32
      *      SVLAN multicast configurations for IP and L2 multicast.
      */
-    rtk_api_ret_t rtl_svlan_l2mc2s_add(rtk_mac_t mac, rtk_mac_t macMsk, rtk_vlan_t svid);
+    rtk_api_ret_t rtl_svlan_l2mc2s_add(rtk_mac_t mac, rtk_mac_t macMsk, rtk_vlan_t svid)
+    {
+        return rtk_svlan_l2mc2s_add(mac, macMsk, svid);
+    }
 
     /* Function Name:
      *      rtl_svlan_l2mc2s_del
@@ -617,7 +698,10 @@ public:
      * Note:
      *      The API can delete Mutlicast to SVID configuration. There are 32 SVLAN multicast configurations for IP and L2 multicast.
      */
-    rtk_api_ret_t rtl_svlan_l2mc2s_del(rtk_mac_t mac, rtk_mac_t macMsk);
+    rtk_api_ret_t rtl_svlan_l2mc2s_del(rtk_mac_t mac, rtk_mac_t macMsk)
+    {
+        return rtk_svlan_l2mc2s_del(mac, macMsk);
+    }
 
     /* Function Name:
      *      rtl_svlan_l2mc2s_get
@@ -637,7 +721,10 @@ public:
      * Note:
      *      The API can get L2 mutlicast to SVID configuration. There are 32 SVLAN multicast configurations for IP and L2 multicast.
      */
-    rtk_api_ret_t rtl_svlan_l2mc2s_get(rtk_mac_t mac, rtk_mac_t macMsk, rtk_vlan_t *pSvid);
+    rtk_api_ret_t rtl_svlan_l2mc2s_get(rtk_mac_t mac, rtk_mac_t macMsk, rtk_vlan_t *pSvid)
+    {
+        return rtk_svlan_l2mc2s_get(mac, macMsk, pSvid);
+    }
 
     /* Function Name:
      *      rtl_svlan_sp2c_add
@@ -664,7 +751,10 @@ public:
      *      SVID will be add C-tag with assigned CVID if the output port is the assigned destination port.
      *      There are 128 SP2C configurations.
      */
-    rtk_api_ret_t rtl_svlan_sp2c_add(rtk_vlan_t svid, rtk_port_t dst_port, rtk_vlan_t cvid);
+    rtk_api_ret_t rtl_svlan_sp2c_add(rtk_vlan_t svid, rtk_port_t dst_port, rtk_vlan_t cvid)
+    {
+        return rtk_svlan_sp2c_add(svid, dst_port, cvid);
+    }
 
     /* Function Name:
      *      rtl_svlan_sp2c_get
@@ -686,7 +776,10 @@ public:
      * Note:
      *     The API can get SVID & Destination Port to CVLAN configuration. There are 128 SP2C configurations.
      */
-    rtk_api_ret_t rtl_svlan_sp2c_get(rtk_vlan_t svid, rtk_port_t dst_port, rtk_vlan_t *pCvid);
+    rtk_api_ret_t rtl_svlan_sp2c_get(rtk_vlan_t svid, rtk_port_t dst_port, rtk_vlan_t *pCvid)
+    {
+        return rtk_svlan_sp2c_get(svid, dst_port, pCvid);
+    }
 
     /* Function Name:
      *      rtl_svlan_sp2c_del
@@ -707,7 +800,10 @@ public:
      * Note:
      *      The API can delete SVID & Destination Port to CVLAN configuration. There are 128 SP2C configurations.
      */
-    rtk_api_ret_t rtl_svlan_sp2c_del(rtk_vlan_t svid, rtk_port_t dst_port);
+    rtk_api_ret_t rtl_svlan_sp2c_del(rtk_vlan_t svid, rtk_port_t dst_port)
+    {
+        return rtk_svlan_sp2c_del(svid, dst_port);
+    }
 
     /* Function Name:
      *      rtl_svlan_lookupType_set
@@ -723,7 +819,10 @@ public:
      * Note:
      *      none
      */
-    rtk_api_ret_t rtl_svlan_lookupType_set(rtk_svlan_lookupType_t type);
+    rtk_api_ret_t rtl_svlan_lookupType_set(rtk_svlan_lookupType_t type)
+    {
+        return rtk_svlan_lookupType_set(type);
+    }
 
     /* Function Name:
      *      rtl_svlan_lookupType_get
@@ -739,7 +838,10 @@ public:
      * Note:
      *      none
      */
-    rtk_api_ret_t rtl_svlan_lookupType_get(rtk_svlan_lookupType_t *pType);
+    rtk_api_ret_t rtl_svlan_lookupType_get(rtk_svlan_lookupType_t *pType)
+    {
+        return rtk_svlan_lookupType_get(pType);
+    }
 
     /* Function Name:
      *      rtl_svlan_trapPri_set
@@ -756,7 +858,10 @@ public:
      * Note:
      *      None
      */
-    rtk_api_ret_t rtl_svlan_trapPri_set(rtk_pri_t priority);
+    rtk_api_ret_t rtl_svlan_trapPri_set(rtk_pri_t priority)
+    {
+        return rtk_svlan_trapPri_set(priority);
+    }
 
     /* Function Name:
      *      rtl_svlan_trapPri_get
@@ -773,7 +878,10 @@ public:
      * Note:
      *      None
      */
-    rtk_api_ret_t rtl_svlan_trapPri_get(rtk_pri_t *pPriority);
+    rtk_api_ret_t rtl_svlan_trapPri_get(rtk_pri_t *pPriority)
+    {
+        return rtk_svlan_trapPri_get(pPriority);
+    }
 
     /* Function Name:
      *      rtl_svlan_unassign_action_set
@@ -792,7 +900,10 @@ public:
      *      The API can configure action of upstream Un-assign svid packet. If action is not
      *      trap to CPU, the port-based SVID sure be assign as system need
      */
-    rtk_api_ret_t rtl_svlan_unassign_action_set(rtk_svlan_unassign_action_t action);
+    rtk_api_ret_t rtl_svlan_unassign_action_set(rtk_svlan_unassign_action_t action)
+    {
+        return rtk_svlan_unassign_action_set(action);
+    }
 
     /* Function Name:
      *      rtl_svlan_unassign_action_get
@@ -808,7 +919,10 @@ public:
      * Note:
      *      None
      */
-    rtk_api_ret_t rtl_svlan_unassign_action_get(rtk_svlan_unassign_action_t *pAction);
+    rtk_api_ret_t rtl_svlan_unassign_action_get(rtk_svlan_unassign_action_t *pAction)
+    {
+        return rtk_svlan_unassign_action_get(pAction);
+    }
 
     /* Function Name:
      *      rtl_svlan_checkAndCreateMbr
@@ -827,7 +941,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_svlan_checkAndCreateMbr(rtk_vlan_t vid, rtk_uint32 *pIndex);
+    rtk_api_ret_t rtl_svlan_checkAndCreateMbr(rtk_vlan_t vid, rtk_uint32 *pIndex)
+    {
+        return rtk_svlan_checkAndCreateMbr(vid, pIndex);
+    }
 };
 
 #endif

@@ -26,7 +26,10 @@ public:
      * Note:
      *      Must initialize oam module before calling any oam APIs.
      */
-    rtk_api_ret_t rtl_oam_init();
+    rtk_api_ret_t rtl_oam_init()
+    {
+        return rtk_oam_init();
+    }
 
     /* Function Name:
      *      rtl_oam_state_set
@@ -44,7 +47,10 @@ public:
      * Note:
      *      This API set OAM state.
      */
-    rtk_api_ret_t rtl_oam_state_set(rtk_enable_t enabled);
+    rtk_api_ret_t rtl_oam_state_set(rtk_enable_t enabled)
+    {
+        return rtk_oam_state_set(enabled);
+    }
 
     /* Function Name:
      *      rtl_oam_state_get
@@ -62,7 +68,10 @@ public:
      * Note:
      *      This API set current OAM state.
      */
-    rtk_api_ret_t rtl_oam_state_get(rtk_enable_t *pEnabled);
+    rtk_api_ret_t rtl_oam_state_get(rtk_enable_t *pEnabled)
+    {
+        return rtk_oam_state_get(pEnabled);
+    }
 
     /* Module Name : OAM */
 
@@ -82,7 +91,10 @@ public:
      * Note:
      *      None
      */
-    rtk_api_ret_t rtl_oam_parserAction_set(rtk_port_t port, rtk_oam_parser_act_t action);
+    rtk_api_ret_t rtl_oam_parserAction_set(rtk_port_t port, rtk_oam_parser_act_t action)
+    {
+        return rtk_oam_parserAction_set(port, action);
+    }
 
     /* Function Name:
      *      rtl_oam_parserAction_get
@@ -99,7 +111,10 @@ public:
      * Note:
      *      None
      */
-    rtk_api_ret_t rtl_oam_parserAction_get(rtk_port_t port, rtk_oam_parser_act_t *pAction);
+    rtk_api_ret_t rtl_oam_parserAction_get(rtk_port_t port, rtk_oam_parser_act_t *pAction)
+    {
+        return rtk_oam_parserAction_get(port, pAction);
+    }
 
     /* Function Name:
      *      rtl_oam_multiplexerAction_set
@@ -117,7 +132,10 @@ public:
      * Note:
      *      None
      */
-    rtk_api_ret_t rtl_oam_multiplexerAction_set(rtk_port_t port, rtk_oam_multiplexer_act_t action);
+    rtk_api_ret_t rtl_oam_multiplexerAction_set(rtk_port_t port, rtk_oam_multiplexer_act_t action)
+    {
+        return rtk_oam_multiplexerAction_set(port, action);
+    }
 
     /* Function Name:
      *      rtl_oam_multiplexerAction_get
@@ -134,7 +152,10 @@ public:
      * Note:
      *      None
      */
-    rtk_api_ret_t rtl_oam_multiplexerAction_get(rtk_port_t port, rtk_oam_multiplexer_act_t *pAction);
+    rtk_api_ret_t rtl_oam_multiplexerAction_get(rtk_port_t port, rtk_oam_multiplexer_act_t *pAction)
+    {
+        return rtk_oam_multiplexerAction_get(port, pAction);
+    }
 };
 
 #endif

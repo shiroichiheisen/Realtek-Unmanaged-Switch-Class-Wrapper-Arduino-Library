@@ -28,7 +28,10 @@ public:
      * Note:
      *      None
      */
-    rtk_api_ret_t rtl_rldp_config_set(rtk_rldp_config_t *pConfig);
+    rtk_api_ret_t rtl_rldp_config_set(rtk_rldp_config_t *pConfig)
+    {
+        return rtk_rldp_config_set(pConfig);
+    }
 
     /* Function Name:
      *      rtl_rldp_config_get
@@ -46,7 +49,10 @@ public:
      * Note:
      *      None
      */
-    rtk_api_ret_t rtl_rldp_config_get(rtk_rldp_config_t *pConfig);
+    rtk_api_ret_t rtl_rldp_config_get(rtk_rldp_config_t *pConfig)
+    {
+        return rtk_rldp_config_get(pConfig);
+    }
 
     /* Function Name:
      *      rtl_rldp_portConfig_set
@@ -65,7 +71,10 @@ public:
      * Note:
      *      None
      */
-    rtk_api_ret_t rtl_rldp_portConfig_set(rtk_port_t port, rtk_rldp_portConfig_t *pPortConfig);
+    rtk_api_ret_t rtl_rldp_portConfig_set(rtk_port_t port, rtk_rldp_portConfig_t *pPortConfig)
+    {
+        return rtk_rldp_portConfig_set(port, pPortConfig);
+    }
 
     /* Function Name:
      *      rtl_rldp_portConfig_get
@@ -83,7 +92,10 @@ public:
      * Note:
      *      None
      */
-    rtk_api_ret_t rtl_rldp_portConfig_get(rtk_port_t port, rtk_rldp_portConfig_t *pPortConfig);
+    rtk_api_ret_t rtl_rldp_portConfig_get(rtk_port_t port, rtk_rldp_portConfig_t *pPortConfig)
+    {
+        return rtk_rldp_portConfig_get(port, pPortConfig);
+    }
 
     /* Function Name:
      *      rtl_rldp_status_get
@@ -100,7 +112,10 @@ public:
      * Note:
      *      None
      */
-    rtk_api_ret_t rtl_rldp_status_get(rtk_rldp_status_t *pStatus);
+    rtk_api_ret_t rtl_rldp_status_get(rtk_rldp_status_t *pStatus)
+    {
+        return rtk_rldp_status_get(pStatus);
+    }
 
     /* Function Name:
      *      rtl_rldp_portStatus_get
@@ -118,7 +133,10 @@ public:
      * Note:
      *      None
      */
-    rtk_api_ret_t rtl_rldp_portStatus_get(rtk_port_t port, rtk_rldp_portStatus_t *pPortStatus);
+    rtk_api_ret_t rtl_rldp_portStatus_get(rtk_port_t port, rtk_rldp_portStatus_t *pPortStatus)
+    {
+        return rtk_rldp_portStatus_get(port, pPortStatus);
+    }
 
     /* Function Name:
      *      rtl_rldp_portStatus_set
@@ -138,7 +156,10 @@ public:
      *      Clear operation effect loop_enter and loop_leave only, other field in
      *      the structure are don't care
      */
-    rtk_api_ret_t rtl_rldp_portStatus_set(rtk_port_t port, rtk_rldp_portStatus_t *pPortStatus);
+    rtk_api_ret_t rtl_rldp_portStatus_set(rtk_port_t port, rtk_rldp_portStatus_t *pPortStatus)
+    {
+        return rtk_rldp_portStatus_set(port, pPortStatus);
+    }
 
     /* Function Name:
      *      rtl_rldp_portLoopPair_get
@@ -156,7 +177,10 @@ public:
      * Note:
      *      None
      */
-    rtk_api_ret_t rtl_rldp_portLoopPair_get(rtk_port_t port, rtk_portmask_t *pPortmask);
+    rtk_api_ret_t rtl_rldp_portLoopPair_get(rtk_port_t port, rtk_portmask_t *pPortmask)
+    {
+        return rtk_rldp_portLoopPair_get(port, pPortmask);
+    }
 };
 
 #endif

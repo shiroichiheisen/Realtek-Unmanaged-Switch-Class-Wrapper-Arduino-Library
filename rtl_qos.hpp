@@ -30,7 +30,10 @@ public:
      *      This API will initialize related Qos setting with queue number assigment.
      *      The queue number is from 1 to 8.
      */
-    rtk_api_ret_t rtl_qos_init(rtk_queue_num_t queueNum);
+    rtk_api_ret_t rtl_qos_init(rtk_queue_num_t queueNum)
+    {
+        return rtk_qos_init(queueNum);
+    }
 
     /* Function Name:
      *      rtl_qos_priSel_set
@@ -60,7 +63,10 @@ public:
      *      - PRIDEC_DA
      *      - PRIDEC_SA
      */
-    rtk_api_ret_t rtl_qos_priSel_set(rtk_qos_priDecTbl_t index, rtk_priority_select_t *pPriDec);
+    rtk_api_ret_t rtl_qos_priSel_set(rtk_qos_priDecTbl_t index, rtk_priority_select_t *pPriDec)
+    {
+        return rtk_qos_priSel_set(index, pPriDec);
+    }
 
     /* Function Name:
      *      rtl_qos_priSel_get
@@ -88,7 +94,10 @@ public:
      *      - PRIDEC_DA,
      *      - PRIDEC_SA,
      */
-    rtk_api_ret_t rtl_qos_priSel_get(rtk_qos_priDecTbl_t index, rtk_priority_select_t *pPriDec);
+    rtk_api_ret_t rtl_qos_priSel_get(rtk_qos_priDecTbl_t index, rtk_priority_select_t *pPriDec)
+    {
+        return rtk_qos_priSel_get(index, pPriDec);
+    }
 
     /* Function Name:
      *      rtl_qos_1pPriRemap_set
@@ -109,7 +118,10 @@ public:
      * Note:
      *      Priority of 802.1Q assignment for internal asic priority, and it is used for queue usage and packet scheduling.
      */
-    rtk_api_ret_t rtl_qos_1pPriRemap_set(rtk_pri_t dot1p_pri, rtk_pri_t int_pri);
+    rtk_api_ret_t rtl_qos_1pPriRemap_set(rtk_pri_t dot1p_pri, rtk_pri_t int_pri)
+    {
+        return rtk_qos_1pPriRemap_set(dot1p_pri, int_pri);
+    }
 
     /* Function Name:
      *      rtl_qos_1pPriRemap_get
@@ -128,7 +140,10 @@ public:
      * Note:
      *      Priority of 802.1Q assigment for internal asic priority, and it is uesed for queue usage and packet scheduling.
      */
-    rtk_api_ret_t rtl_qos_1pPriRemap_get(rtk_pri_t dot1p_pri, rtk_pri_t *pInt_pri);
+    rtk_api_ret_t rtl_qos_1pPriRemap_get(rtk_pri_t dot1p_pri, rtk_pri_t *pInt_pri)
+    {
+        return rtk_qos_1pPriRemap_get(dot1p_pri, pInt_pri);
+    }
 
     /* Function Name:
      *      rtl_qos_1pRemarkSrcSel_set
@@ -149,7 +164,10 @@ public:
      *      The API can configure 802.1p remark functionality to map original 802.1p value or internal
      *      priority to TX DSCP value.
      */
-    rtk_api_ret_t rtl_qos_1pRemarkSrcSel_set(rtk_qos_1pRmkSrc_t type);
+    rtk_api_ret_t rtl_qos_1pRemarkSrcSel_set(rtk_qos_1pRmkSrc_t type)
+    {
+        return rtk_qos_1pRemarkSrcSel_set(type);
+    }
 
     /* Function Name:
      *      rtl_qos_1pRemarkSrcSel_get
@@ -170,7 +188,10 @@ public:
      * Note:
      *      None
      */
-    rtk_api_ret_t rtl_qos_1pRemarkSrcSel_get(rtk_qos_1pRmkSrc_t *pType);
+    rtk_api_ret_t rtl_qos_1pRemarkSrcSel_get(rtk_qos_1pRmkSrc_t *pType)
+    {
+        return rtk_qos_1pRemarkSrcSel_get(pType);
+    }
 
     /* Function Name:
      *      rtl_qos_dscpPriRemap_set
@@ -193,7 +214,10 @@ public:
      *      greater DSCP implies a better network service. As can be seen, the DSCP totally overlaps the old precedence field of TOS. So if values of
      *      DSCP are carefully chosen then backward compatibility can be achieved.
      */
-    rtk_api_ret_t rtl_qos_dscpPriRemap_set(rtk_dscp_t dscp, rtk_pri_t int_pri);
+    rtk_api_ret_t rtl_qos_dscpPriRemap_set(rtk_dscp_t dscp, rtk_pri_t int_pri)
+    {
+        return rtk_qos_dscpPriRemap_set(dscp, int_pri);
+    }
 
     /* Function Name:
      *      rtl_qos_dscpPriRemap_get
@@ -213,7 +237,10 @@ public:
      *      greater DSCP implies a better network service. As can be seen, the DSCP totally overlaps the old precedence field of TOS. So if values of
      *      DSCP are carefully chosen then backward compatibility can be achieved.
      */
-    rtk_api_ret_t rtl_qos_dscpPriRemap_get(rtk_dscp_t dscp, rtk_pri_t *pInt_pri);
+    rtk_api_ret_t rtl_qos_dscpPriRemap_get(rtk_dscp_t dscp, rtk_pri_t *pInt_pri)
+    {
+        return rtk_qos_dscpPriRemap_get(dscp, pInt_pri);
+    }
 
     /* Function Name:
      *      rtl_qos_portPri_set
@@ -234,7 +261,10 @@ public:
      * Note:
      *      The API can set priority of port assignments for queue usage and packet scheduling.
      */
-    rtk_api_ret_t rtl_qos_portPri_set(rtk_port_t port, rtk_pri_t int_pri);
+    rtk_api_ret_t rtl_qos_portPri_set(rtk_port_t port, rtk_pri_t int_pri)
+    {
+        return rtk_qos_portPri_set(port, int_pri);
+    }
 
     /* Function Name:
      *      rtl_qos_portPri_get
@@ -253,7 +283,10 @@ public:
      * Note:
      *      The API can get priority of port assignments for queue usage and packet scheduling.
      */
-    rtk_api_ret_t rtl_qos_portPri_get(rtk_port_t port, rtk_pri_t *pInt_pri);
+    rtk_api_ret_t rtl_qos_portPri_get(rtk_port_t port, rtk_pri_t *pInt_pri)
+    {
+        return rtk_qos_portPri_get(port, pInt_pri);
+    }
 
     /* Function Name:
      *      rtl_qos_queueNum_set
@@ -273,7 +306,10 @@ public:
      * Note:
      *      The API can set the output queue number of the specified port. The queue number is from 1 to 8.
      */
-    rtk_api_ret_t rtl_qos_queueNum_set(rtk_port_t port, rtk_queue_num_t queue_num);
+    rtk_api_ret_t rtl_qos_queueNum_set(rtk_port_t port, rtk_queue_num_t queue_num)
+    {
+        return rtk_qos_queueNum_set(port, queue_num);
+    }
 
     /* Function Name:
      *      rtl_qos_queueNum_get
@@ -291,7 +327,10 @@ public:
      * Note:
      *      The API will return the output queue number of the specified port. The queue number is from 1 to 8.
      */
-    rtk_api_ret_t rtl_qos_queueNum_get(rtk_port_t port, rtk_queue_num_t *pQueue_num);
+    rtk_api_ret_t rtl_qos_queueNum_get(rtk_port_t port, rtk_queue_num_t *pQueue_num)
+    {
+        return rtk_qos_queueNum_get(port, pQueue_num);
+    }
 
     /* Function Name:
      *      rtl_qos_priMap_set
@@ -315,7 +354,10 @@ public:
      *      ASIC supports priority mapping to queue with different queue number from 1 to 8.
      *      For different queue numbers usage, ASIC supports different internal available queue IDs.
      */
-    rtk_api_ret_t rtl_qos_priMap_set(rtk_queue_num_t queue_num, rtk_qos_pri2queue_t *pPri2qid);
+    rtk_api_ret_t rtl_qos_priMap_set(rtk_queue_num_t queue_num, rtk_qos_pri2queue_t *pPri2qid)
+    {
+        return rtk_qos_priMap_set(queue_num, pPri2qid);
+    }
 
     /* Function Name:
      *      rtl_qos_priMap_get
@@ -335,7 +377,10 @@ public:
      *      The API can return the mapping queue id of the specified priority and queue number.
      *      The queue number is from 1 to 8.
      */
-    rtk_api_ret_t rtl_qos_priMap_get(rtk_queue_num_t queue_num, rtk_qos_pri2queue_t *pPri2qid);
+    rtk_api_ret_t rtl_qos_priMap_get(rtk_queue_num_t queue_num, rtk_qos_pri2queue_t *pPri2qid)
+    {
+        return rtk_qos_priMap_get(queue_num, pPri2qid);
+    }
 
     /* Function Name:
      *      rtl_qos_schedulingQueue_set
@@ -360,7 +405,10 @@ public:
      *      than strict queue id 4. The WFQ queue weight is from 1 to 128, and weight 0 is
      *      for strict priority queue type.
      */
-    rtk_api_ret_t rtl_qos_schedulingQueue_set(rtk_port_t port, rtk_qos_queue_weights_t *pQweights);
+    rtk_api_ret_t rtl_qos_schedulingQueue_set(rtk_port_t port, rtk_qos_queue_weights_t *pQweights)
+    {
+        return rtk_qos_schedulingQueue_set(port, pQweights);
+    }
 
     /* Function Name:
      *      rtl_qos_schedulingQueue_get
@@ -380,7 +428,10 @@ public:
      *      The API can get weight and type, strict priority or weight fair queue (WFQ) for dedicated port for using queues.
      *      The WFQ queue weight is from 1 to 128, and weight 0 is for strict priority queue type.
      */
-    rtk_api_ret_t rtl_qos_schedulingQueue_get(rtk_port_t port, rtk_qos_queue_weights_t *pQweights);
+    rtk_api_ret_t rtl_qos_schedulingQueue_get(rtk_port_t port, rtk_qos_queue_weights_t *pQweights)
+    {
+        return rtk_qos_schedulingQueue_get(port, pQweights);
+    }
 
     /* Function Name:
      *      rtl_qos_1pRemarkEnable_set
@@ -403,7 +454,10 @@ public:
      *      - DISABLED
      *      - ENABLED
      */
-    rtk_api_ret_t rtl_qos_1pRemarkEnable_set(rtk_port_t port, rtk_enable_t enable);
+    rtk_api_ret_t rtl_qos_1pRemarkEnable_set(rtk_port_t port, rtk_enable_t enable)
+    {
+        return rtk_qos_1pRemarkEnable_set(port, enable);
+    }
 
     /* Function Name:
      *      rtl_qos_1pRemarkEnable_get
@@ -424,7 +478,10 @@ public:
      *      - DISABLED
      *      - ENABLED
      */
-    rtk_api_ret_t rtl_qos_1pRemarkEnable_get(rtk_port_t port, rtk_enable_t *pEnable);
+    rtk_api_ret_t rtl_qos_1pRemarkEnable_get(rtk_port_t port, rtk_enable_t *pEnable)
+    {
+        return rtk_qos_1pRemarkEnable_get(port, pEnable);
+    }
 
     /* Function Name:
      *      rtl_qos_1pRemark_set
@@ -444,7 +501,10 @@ public:
      * Note:
      *      The API can set 802.1p parameters source priority and new priority.
      */
-    rtk_api_ret_t rtl_qos_1pRemark_set(rtk_pri_t int_pri, rtk_pri_t dot1p_pri);
+    rtk_api_ret_t rtl_qos_1pRemark_set(rtk_pri_t int_pri, rtk_pri_t dot1p_pri)
+    {
+        return rtk_qos_1pRemark_set(int_pri, dot1p_pri);
+    }
 
     /* Function Name:
      *      rtl_qos_1pRemark_get
@@ -462,7 +522,10 @@ public:
      * Note:
      *      The API can get 802.1p remarking parameters. It would return new priority of ingress priority.
      */
-    rtk_api_ret_t rtl_qos_1pRemark_get(rtk_pri_t int_pri, rtk_pri_t *pDot1p_pri);
+    rtk_api_ret_t rtl_qos_1pRemark_get(rtk_pri_t int_pri, rtk_pri_t *pDot1p_pri)
+    {
+        return rtk_qos_1pRemark_get(int_pri, pDot1p_pri);
+    }
 
     /* Function Name:
      *      rtl_qos_dscpRemarkEnable_set
@@ -486,7 +549,10 @@ public:
      *      - DISABLED
      *      - ENABLED
      */
-    rtk_api_ret_t rtl_qos_dscpRemarkEnable_set(rtk_port_t port, rtk_enable_t enable);
+    rtk_api_ret_t rtl_qos_dscpRemarkEnable_set(rtk_port_t port, rtk_enable_t enable)
+    {
+        return rtk_qos_dscpRemarkEnable_set(port, enable);
+    }
 
     /* Function Name:
      *      rtl_qos_dscpRemarkEnable_get
@@ -507,7 +573,10 @@ public:
      *      - DISABLED
      *      - ENABLED
      */
-    rtk_api_ret_t rtl_qos_dscpRemarkEnable_get(rtk_port_t port, rtk_enable_t *pEnable);
+    rtk_api_ret_t rtl_qos_dscpRemarkEnable_get(rtk_port_t port, rtk_enable_t *pEnable)
+    {
+        return rtk_qos_dscpRemarkEnable_get(port, pEnable);
+    }
 
     /* Function Name:
      *      rtl_qos_dscpRemark_set
@@ -527,7 +596,10 @@ public:
      * Note:
      *      The API can set DSCP value and mapping priority.
      */
-    rtk_api_ret_t rtl_qos_dscpRemark_set(rtk_pri_t int_pri, rtk_dscp_t dscp);
+    rtk_api_ret_t rtl_qos_dscpRemark_set(rtk_pri_t int_pri, rtk_dscp_t dscp)
+    {
+        return rtk_qos_dscpRemark_set(int_pri, dscp);
+    }
 
     /* Function Name:
      *      rtl_qos_dscpRemark_get
@@ -545,7 +617,10 @@ public:
      * Note:
      *      The API can get DSCP parameters. It would return DSCP value for mapping priority.
      */
-    rtk_api_ret_t rtl_qos_dscpRemark_get(rtk_pri_t int_pri, rtk_dscp_t *pDscp);
+    rtk_api_ret_t rtl_qos_dscpRemark_get(rtk_pri_t int_pri, rtk_dscp_t *pDscp)
+    {
+        return rtk_qos_dscpRemark_get(int_pri, pDscp);
+    }
 
     /* Function Name:
      *      rtl_qos_dscpRemarkSrcSel_set
@@ -566,7 +641,10 @@ public:
      *      The API can configure DSCP remark functionality to map original DSCP value or internal
      *      priority to TX DSCP value.
      */
-    rtk_api_ret_t rtl_qos_dscpRemarkSrcSel_set(rtk_qos_dscpRmkSrc_t type);
+    rtk_api_ret_t rtl_qos_dscpRemarkSrcSel_set(rtk_qos_dscpRmkSrc_t type)
+    {
+        return rtk_qos_dscpRemarkSrcSel_set(type);
+    }
 
     /* Function Name:
      *      rtl_qos_dscpRemarkSrcSel_get
@@ -587,7 +665,10 @@ public:
      * Note:
      *      None
      */
-    rtk_api_ret_t rtl_qos_dscpRemarkSrcSel_get(rtk_qos_dscpRmkSrc_t *pType);
+    rtk_api_ret_t rtl_qos_dscpRemarkSrcSel_get(rtk_qos_dscpRmkSrc_t *pType)
+    {
+        return rtk_qos_dscpRemarkSrcSel_get(pType);
+    }
 
     /* Function Name:
      *      rtl_qos_dscpRemark2Dscp_set
@@ -607,7 +688,10 @@ public:
      *      dal_apollomp_qos_dscpRemarkSrcSel_set(), because DSCP remark functionality can map original DSCP
      *      value or internal priority to TX DSCP value.
      */
-    rtk_api_ret_t rtl_qos_dscpRemark2Dscp_set(rtk_dscp_t dscp, rtk_dscp_t rmkDscp);
+    rtk_api_ret_t rtl_qos_dscpRemark2Dscp_set(rtk_dscp_t dscp, rtk_dscp_t rmkDscp)
+    {
+        return rtk_qos_dscpRemark2Dscp_set(dscp, rmkDscp);
+    }
 
     /* Function Name:
      *      rtl_qos_dscpRemark2Dscp_get
@@ -625,7 +709,10 @@ public:
      * Note:
      *      None.
      */
-    rtk_api_ret_t rtl_qos_dscpRemark2Dscp_get(rtk_dscp_t dscp, rtk_dscp_t *pDscp);
+    rtk_api_ret_t rtl_qos_dscpRemark2Dscp_get(rtk_dscp_t dscp, rtk_dscp_t *pDscp)
+    {
+        return rtk_qos_dscpRemark2Dscp_get(dscp, pDscp);
+    }
 
     /* Function Name:
      *      rtl_qos_portPriSelIndex_set
@@ -645,7 +732,10 @@ public:
      * Note:
      *      The API can set priority of port assignments for queue usage and packet scheduling.
      */
-    rtk_api_ret_t rtl_qos_portPriSelIndex_set(rtk_port_t port, rtk_qos_priDecTbl_t index);
+    rtk_api_ret_t rtl_qos_portPriSelIndex_set(rtk_port_t port, rtk_qos_priDecTbl_t index)
+    {
+        return rtk_qos_portPriSelIndex_set(port, index);
+    }
 
     /* Function Name:
      *      rtl_qos_portPriSelIndex_get
@@ -663,7 +753,10 @@ public:
      * Note:
      *      The API can get priority of port assignments for queue usage and packet scheduling.
      */
-    rtk_api_ret_t rtl_qos_portPriSelIndex_get(rtk_port_t port, rtk_qos_priDecTbl_t *pIndex);
+    rtk_api_ret_t rtl_qos_portPriSelIndex_get(rtk_port_t port, rtk_qos_priDecTbl_t *pIndex)
+    {
+        return rtk_qos_portPriSelIndex_get(port, pIndex);
+    }
 };
 
 #endif

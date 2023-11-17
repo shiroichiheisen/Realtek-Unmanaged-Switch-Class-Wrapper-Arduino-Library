@@ -26,7 +26,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_switch_probe(switch_chip_t *pSwitchChip);
+    rtk_api_ret_t rtl_switch_probe(switch_chip_t *pSwitchChip)
+    {
+        return rtk_switch_probe(pSwitchChip);
+    }
 
     /* Function Name:
      *      rtl_switch_initialState_set
@@ -42,7 +45,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_switch_initialState_set(init_state_t state);
+    rtk_api_ret_t rtl_switch_initialState_set(init_state_t state)
+    {
+        return rtk_switch_initialState_set(state);
+    }
 
     /* Function Name:
      *      rtl_switch_initialState_get
@@ -58,7 +64,10 @@ public:
      * Note:
      *
      */
-    init_state_t rtl_switch_initialState_get();
+    init_state_t rtl_switch_initialState_get()
+    {
+        return rtk_switch_initialState_get();
+    }
 
     /* Function Name:
      *      rtl_switch_logicalPortCheck
@@ -75,7 +84,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_switch_logicalPortCheck(rtk_port_t logicalPort);
+    rtk_api_ret_t rtl_switch_logicalPortCheck(rtk_port_t logicalPort)
+    {
+        return rtk_switch_logicalPortCheck(logicalPort);
+    }
 
     /* Function Name:
      *      rtl_switch_isUtpPort
@@ -92,7 +104,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_switch_isUtpPort(rtk_port_t logicalPort);
+    rtk_api_ret_t rtl_switch_isUtpPort(rtk_port_t logicalPort)
+    {
+        return rtk_switch_isUtpPort(logicalPort);
+    }
 
     /* Function Name:
      *      rtl_switch_isExtPort
@@ -109,7 +124,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_switch_isExtPort(rtk_port_t logicalPort);
+    rtk_api_ret_t rtl_switch_isExtPort(rtk_port_t logicalPort)
+    {
+        return rtk_switch_isExtPort(logicalPort);
+    }
 
     /* Function Name:
      *      rtl_switch_isHsgPort
@@ -126,7 +144,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_switch_isHsgPort(rtk_port_t logicalPort);
+    rtk_api_ret_t rtl_switch_isHsgPort(rtk_port_t logicalPort)
+    {
+        return rtk_switch_isHsgPort(logicalPort);
+    }
 
     /* Function Name:
      *      rtl_switch_isSgmiiPort
@@ -143,7 +164,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_switch_isSgmiiPort(rtk_port_t logicalPort);
+    rtk_api_ret_t rtl_switch_isSgmiiPort(rtk_port_t logicalPort)
+    {
+        return rtk_switch_isSgmiiPort(logicalPort);
+    }
 
     /* Function Name:
      *      rtl_switch_isCPUPort
@@ -160,7 +184,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_switch_isCPUPort(rtk_port_t logicalPort);
+    rtk_api_ret_t rtl_switch_isCPUPort(rtk_port_t logicalPort)
+    {
+        return rtk_switch_isCPUPort(logicalPort);
+    }
 
     /* Function Name:
      *      rtl_switch_isComboPort
@@ -177,7 +204,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_switch_isComboPort(rtk_port_t logicalPort);
+    rtk_api_ret_t rtl_switch_isComboPort(rtk_port_t logicalPort)
+    {
+        return rtk_switch_isComboPort(logicalPort);
+    }
 
     /* Function Name:
      *      rtl_switch_ComboPort_get
@@ -192,7 +222,10 @@ public:
      * Note:
      *
      */
-    rtk_uint32 rtl_switch_ComboPort_get();
+    rtk_uint32 rtl_switch_ComboPort_get()
+    {
+        return rtk_switch_ComboPort_get();
+    }
 
     /* Function Name:
      *      rtl_switch_isPtpPort
@@ -209,7 +242,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_switch_isPtpPort(rtk_port_t logicalPort);
+    rtk_api_ret_t rtl_switch_isPtpPort(rtk_port_t logicalPort)
+    {
+        return rtk_switch_isPtpPort(logicalPort);
+    }
 
     /* Function Name:
      *      rtl_switch_port_L2P_get
@@ -224,7 +260,10 @@ public:
      * Note:
      *
      */
-    rtk_uint32 rtl_switch_port_L2P_get(rtk_port_t logicalPort);
+    rtk_uint32 rtl_switch_port_L2P_get(rtk_port_t logicalPort)
+    {
+        return rtk_switch_port_L2P_get(logicalPort);
+    }
 
     /* Function Name:
      *      rtl_switch_port_P2L_get
@@ -239,7 +278,10 @@ public:
      * Note:
      *
      */
-    rtk_port_t rtl_switch_port_P2L_get(rtk_uint32 physicalPort);
+    rtk_port_t rtl_switch_port_P2L_get(rtk_uint32 physicalPort)
+    {
+        return rtk_switch_port_P2L_get(physicalPort);
+    }
 
     /* Function Name:
      *      rtl_switch_isPortMaskValid
@@ -257,7 +299,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_switch_isPortMaskValid(rtk_portmask_t *pPmask);
+    rtk_api_ret_t rtl_switch_isPortMaskValid(rtk_portmask_t *pPmask)
+    {
+        return rtk_switch_isPortMaskValid(pPmask);
+    }
 
     /* Function Name:
      *      rtl_switch_isPortMaskUtp
@@ -275,7 +320,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_switch_isPortMaskUtp(rtk_portmask_t *pPmask);
+    rtk_api_ret_t rtl_switch_isPortMaskUtp(rtk_portmask_t *pPmask)
+    {
+        return rtk_switch_isPortMaskUtp(pPmask);
+    }
 
     /* Function Name:
      *      rtl_switch_isPortMaskExt
@@ -293,7 +341,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_switch_isPortMaskExt(rtk_portmask_t *pPmask);
+    rtk_api_ret_t rtl_switch_isPortMaskExt(rtk_portmask_t *pPmask)
+    {
+        return rtk_switch_isPortMaskExt(pPmask);
+    }
 
     /* Function Name:
      *      rtl_switch_portmask_L2P_get
@@ -311,7 +362,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_switch_portmask_L2P_get(rtk_portmask_t *pLogicalPmask, rtk_uint32 *pPhysicalPortmask);
+    rtk_api_ret_t rtl_switch_portmask_L2P_get(rtk_portmask_t *pLogicalPmask, rtk_uint32 *pPhysicalPortmask)
+    {
+        return rtk_switch_portmask_L2P_get(pLogicalPmask, pPhysicalPortmask);
+    }
 
     /* Function Name:
      *      rtl_switch_portmask_P2L_get
@@ -329,7 +383,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_switch_portmask_P2L_get(rtk_uint32 physicalPortmask, rtk_portmask_t *pLogicalPmask);
+    rtk_api_ret_t rtl_switch_portmask_P2L_get(rtk_uint32 physicalPortmask, rtk_portmask_t *pLogicalPmask)
+    {
+        return rtk_switch_portmask_P2L_get(physicalPortmask, pLogicalPmask);
+    }
 
     /* Function Name:
      *      rtl_switch_phyPortMask_get
@@ -345,7 +402,10 @@ public:
      * Note:
      *
      */
-    rtk_uint32 rtl_switch_phyPortMask_get();
+    rtk_uint32 rtl_switch_phyPortMask_get()
+    {
+        return rtk_switch_phyPortMask_get();
+    }
 
     /* Function Name:
      *      rtl_switch_logPortMask_get
@@ -362,7 +422,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_switch_logPortMask_get(rtk_portmask_t *pPortmask);
+    rtk_api_ret_t rtl_switch_logPortMask_get(rtk_portmask_t *pPortmask)
+    {
+        return rtk_switch_logPortMask_get(pPortmask);
+    }
 
     /* Function Name:
      *      rtl_switch_init
@@ -379,7 +442,10 @@ public:
      * Note:
      *      The API can set chip registers to default configuration for different release chip model.
      */
-    rtk_api_ret_t rtl_switch_init();
+    rtk_api_ret_t rtl_switch_init()
+    {
+        return rtk_switch_init();
+    }
 
     /* Function Name:
      *      rtl_switch_portMaxPktLen_set
@@ -398,7 +464,10 @@ public:
      *      RT_ERR_INPUT        - Error Input
      * Note:
      */
-    rtk_api_ret_t rtl_switch_portMaxPktLen_set(rtk_port_t port, rtk_switch_maxPktLen_linkSpeed_t speed, rtk_uint32 cfgId);
+    rtk_api_ret_t rtl_switch_portMaxPktLen_set(rtk_port_t port, rtk_switch_maxPktLen_linkSpeed_t speed, rtk_uint32 cfgId)
+    {
+        return rtk_switch_portMaxPktLen_set(port, speed, cfgId);
+    }
 
     /* Function Name:
      *      rtl_switch_portMaxPktLen_get
@@ -416,7 +485,10 @@ public:
      *      RT_ERR_INPUT        - Error Input
      * Note:
      */
-    rtk_api_ret_t rtl_switch_portMaxPktLen_get(rtk_port_t port, rtk_switch_maxPktLen_linkSpeed_t speed, rtk_uint32 *pCfgId);
+    rtk_api_ret_t rtl_switch_portMaxPktLen_get(rtk_port_t port, rtk_switch_maxPktLen_linkSpeed_t speed, rtk_uint32 *pCfgId)
+    {
+        return rtk_switch_portMaxPktLen_get(port, speed, pCfgId);
+    }
 
     /* Function Name:
      *      rtl_switch_maxPktLenCfg_set
@@ -434,7 +506,10 @@ public:
      *      RT_ERR_INPUT        - Error Input
      * Note:
      */
-    rtk_api_ret_t rtl_switch_maxPktLenCfg_set(rtk_uint32 cfgId, rtk_uint32 pktLen);
+    rtk_api_ret_t rtl_switch_maxPktLenCfg_set(rtk_uint32 cfgId, rtk_uint32 pktLen)
+    {
+        return rtk_switch_maxPktLenCfg_set(cfgId, pktLen);
+    }
 
     /* Function Name:
      *      rtl_switch_maxPktLenCfg_get
@@ -452,7 +527,10 @@ public:
      *      RT_ERR_INPUT        - Error Input
      * Note:
      */
-    rtk_api_ret_t rtl_switch_maxPktLenCfg_get(rtk_uint32 cfgId, rtk_uint32 *pPktLen);
+    rtk_api_ret_t rtl_switch_maxPktLenCfg_get(rtk_uint32 cfgId, rtk_uint32 *pPktLen)
+    {
+        return rtk_switch_maxPktLenCfg_get(cfgId, pPktLen);
+    }
 
     /* Function Name:
      *      rtl_switch_greenEthernet_set
@@ -473,7 +551,10 @@ public:
      *      - DISABLE
      *      - ENABLE
      */
-    rtk_api_ret_t rtl_switch_greenEthernet_set(rtk_enable_t enable);
+    rtk_api_ret_t rtl_switch_greenEthernet_set(rtk_enable_t enable)
+    {
+        return rtk_switch_greenEthernet_set(enable);
+    }
 
     /* Function Name:
      *      rtl_switch_greenEthernet_get
@@ -490,7 +571,10 @@ public:
      * Note:
      *      This API can get Green Ethernet state.
      */
-    rtk_api_ret_t rtl_switch_greenEthernet_get(rtk_enable_t *pEnable);
+    rtk_api_ret_t rtl_switch_greenEthernet_get(rtk_enable_t *pEnable)
+    {
+        return rtk_switch_greenEthernet_get(pEnable);
+    }
 
     /* Function Name:
      *      rtl_switch_maxLogicalPort_get
@@ -505,7 +589,10 @@ public:
      * Note:
      *      This API can get max logical port
      */
-    rtk_port_t rtl_switch_maxLogicalPort_get();
+    rtk_port_t rtl_switch_maxLogicalPort_get()
+    {
+        return rtk_switch_maxLogicalPort_get();
+    }
 
     /* Function Name:
      *      rtl_switch_maxMeterId_get
@@ -521,7 +608,10 @@ public:
      * Note:
      *
      */
-    rtk_uint32 rtl_switch_maxMeterId_get();
+    rtk_uint32 rtl_switch_maxMeterId_get()
+    {
+        return rtk_switch_maxMeterId_get();
+    }
 
     /* Function Name:
      *      rtl_switch_maxLutAddrNumber_get
@@ -537,7 +627,10 @@ public:
      * Note:
      *
      */
-    rtk_uint32 rtl_switch_maxLutAddrNumber_get();
+    rtk_uint32 rtl_switch_maxLutAddrNumber_get()
+    {
+        return rtk_switch_maxLutAddrNumber_get();
+    }
 
     /* Function Name:
      *      rtl_switch_isValidTrunkGrpId
@@ -553,7 +646,10 @@ public:
      * Note:
      *
      */
-    rtk_uint32 rtl_switch_isValidTrunkGrpId(rtk_uint32 grpId);
+    rtk_uint32 rtl_switch_isValidTrunkGrpId(rtk_uint32 grpId)
+    {
+        return rtk_switch_isValidTrunkGrpId(grpId);
+    }
 };
 
 #endif

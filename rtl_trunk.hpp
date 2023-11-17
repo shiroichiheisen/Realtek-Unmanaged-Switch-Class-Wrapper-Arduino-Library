@@ -31,7 +31,10 @@ public:
      *      The API can set port trunking group port mask. Each port trunking group has max 4 ports.
      *      If enabled port mask has less than 2 ports available setting, then this trunking group function is disabled.
      */
-    rtk_api_ret_t rtl_trunk_port_set(rtk_trunk_group_t trk_gid, rtk_portmask_t *pTrunk_member_portmask);
+    rtk_api_ret_t rtl_trunk_port_set(rtk_trunk_group_t trk_gid, rtk_portmask_t *pTrunk_member_portmask)
+    {
+        return rtk_trunk_port_set(trk_gid, pTrunk_member_portmask);
+    }
 
     /* Function Name:
      *      rtl_trunk_port_get
@@ -49,7 +52,10 @@ public:
      * Note:
      *      The API can get 2 port trunking group.
      */
-    rtk_api_ret_t rtl_trunk_port_get(rtk_trunk_group_t trk_gid, rtk_portmask_t *pTrunk_member_portmask);
+    rtk_api_ret_t rtl_trunk_port_get(rtk_trunk_group_t trk_gid, rtk_portmask_t *pTrunk_member_portmask)
+    {
+        return rtk_trunk_port_get(trk_gid, pTrunk_member_portmask);
+    }
 
     /* Function Name:
      *      rtl_trunk_distributionAlgorithm_set
@@ -81,7 +87,10 @@ public:
      *      - 0b0000011: SMAC & SPA
      *      - Note that it could be an arbitrary combination or independent set
      */
-    rtk_api_ret_t rtl_trunk_distributionAlgorithm_set(rtk_trunk_group_t trk_gid, rtk_uint32 algo_bitmask);
+    rtk_api_ret_t rtl_trunk_distributionAlgorithm_set(rtk_trunk_group_t trk_gid, rtk_uint32 algo_bitmask)
+    {
+        return rtk_trunk_distributionAlgorithm_set(trk_gid, algo_bitmask);
+    }
 
     /* Function Name:
      *      rtl_trunk_distributionAlgorithm_get
@@ -99,7 +108,10 @@ public:
      * Note:
      *      The API can get port trunking hash algorithm sources.
      */
-    rtk_api_ret_t rtl_trunk_distributionAlgorithm_get(rtk_trunk_group_t trk_gid, rtk_uint32 *pAlgo_bitmask);
+    rtk_api_ret_t rtl_trunk_distributionAlgorithm_get(rtk_trunk_group_t trk_gid, rtk_uint32 *pAlgo_bitmask)
+    {
+        return rtk_trunk_distributionAlgorithm_get(trk_gid, pAlgo_bitmask);
+    }
 
     /* Function Name:
      *      rtl_trunk_trafficSeparate_set
@@ -120,7 +132,10 @@ public:
      *      SEPARATE_NONE: disable traffic separation
      *      SEPARATE_FLOOD: trunk MSB link up port is dedicated to TX flooding (L2 lookup miss) traffic
      */
-    rtk_api_ret_t rtl_trunk_trafficSeparate_set(rtk_trunk_group_t trk_gid, rtk_trunk_separateType_t separateType);
+    rtk_api_ret_t rtl_trunk_trafficSeparate_set(rtk_trunk_group_t trk_gid, rtk_trunk_separateType_t separateType)
+    {
+        return rtk_trunk_trafficSeparate_set(trk_gid, separateType);
+    }
 
     /* Function Name:
      *      rtl_trunk_trafficSeparate_get
@@ -140,7 +155,10 @@ public:
      *      SEPARATE_NONE: disable traffic separation
      *      SEPARATE_FLOOD: trunk MSB link up port is dedicated to TX flooding (L2 lookup miss) traffic
      */
-    rtk_api_ret_t rtl_trunk_trafficSeparate_get(rtk_trunk_group_t trk_gid, rtk_trunk_separateType_t *pSeparateType);
+    rtk_api_ret_t rtl_trunk_trafficSeparate_get(rtk_trunk_group_t trk_gid, rtk_trunk_separateType_t *pSeparateType)
+    {
+        return rtk_trunk_trafficSeparate_get(trk_gid, pSeparateType);
+    }
 
     /* Function Name:
      *      rtl_trunk_mode_set
@@ -159,7 +177,10 @@ public:
      *      - TRUNK_MODE_NORMAL
      *      - TRUNK_MODE_DUMB
      */
-    rtk_api_ret_t rtl_trunk_mode_set(rtk_trunk_mode_t mode);
+    rtk_api_ret_t rtl_trunk_mode_set(rtk_trunk_mode_t mode)
+    {
+        return rtk_trunk_mode_set(mode);
+    }
 
     /* Function Name:
      *      rtl_trunk_mode_get
@@ -178,7 +199,10 @@ public:
      *      - TRUNK_MODE_NORMAL
      *      - TRUNK_MODE_DUMB
      */
-    rtk_api_ret_t rtl_trunk_mode_get(rtk_trunk_mode_t *pMode);
+    rtk_api_ret_t rtl_trunk_mode_get(rtk_trunk_mode_t *pMode)
+    {
+        return rtk_trunk_mode_get(pMode);
+    }
 
     /* Function Name:
      *      rtl_trunk_trafficPause_set
@@ -196,7 +220,10 @@ public:
      * Note:
      *      None.
      */
-    rtk_api_ret_t rtl_trunk_trafficPause_set(rtk_trunk_group_t trk_gid, rtk_enable_t enable);
+    rtk_api_ret_t rtl_trunk_trafficPause_set(rtk_trunk_group_t trk_gid, rtk_enable_t enable)
+    {
+        return rtk_trunk_trafficPause_set(trk_gid, enable);
+    }
 
     /* Function Name:
      *      rtl_trunk_trafficPause_get
@@ -214,7 +241,10 @@ public:
      * Note:
      *      None.
      */
-    rtk_api_ret_t rtl_trunk_trafficPause_get(rtk_trunk_group_t trk_gid, rtk_enable_t *pEnable);
+    rtk_api_ret_t rtl_trunk_trafficPause_get(rtk_trunk_group_t trk_gid, rtk_enable_t *pEnable)
+    {
+        return rtk_trunk_trafficPause_get(trk_gid, pEnable);
+    }
 
     /* Function Name:
      *      rtl_trunk_hashMappingTable_set
@@ -238,7 +268,10 @@ public:
      *      Trunk group 0 & 1 shares the same hash mapping table.
      *      Trunk group 2 uses a independent table.
      */
-    rtk_api_ret_t rtl_trunk_hashMappingTable_set(rtk_trunk_group_t trk_gid, rtk_trunk_hashVal2Port_t *pHash2Port_array);
+    rtk_api_ret_t rtl_trunk_hashMappingTable_set(rtk_trunk_group_t trk_gid, rtk_trunk_hashVal2Port_t *pHash2Port_array)
+    {
+        return rtk_trunk_hashMappingTable_set(trk_gid, pHash2Port_array);
+    }
 
     /* Function Name:
      *      rtl_trunk_hashMappingTable_get
@@ -258,7 +291,10 @@ public:
      *      Trunk group 0 & 1 shares the same hash mapping table.
      *      Trunk group 2 uses a independent table.
      */
-    rtk_api_ret_t rtl_trunk_hashMappingTable_get(rtk_trunk_group_t trk_gid, rtk_trunk_hashVal2Port_t *pHash2Port_array);
+    rtk_api_ret_t rtl_trunk_hashMappingTable_get(rtk_trunk_group_t trk_gid, rtk_trunk_hashVal2Port_t *pHash2Port_array)
+    {
+        return rtk_trunk_hashMappingTable_get(trk_gid, pHash2Port_array);
+    }
 
     /* Function Name:
      *      rtl_trunk_portQueueEmpty_get
@@ -275,7 +311,10 @@ public:
      * Note:
      *      None.
      */
-    rtk_api_ret_t rtl_trunk_portQueueEmpty_get(rtk_portmask_t *pEmpty_portmask);
+    rtk_api_ret_t rtl_trunk_portQueueEmpty_get(rtk_portmask_t *pEmpty_portmask)
+    {
+        return rtk_trunk_portQueueEmpty_get(pEmpty_portmask);
+    }
 };
 
 #endif

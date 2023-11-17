@@ -35,7 +35,10 @@ public:
      *          - UCAST_ACTION_TRAP2CPU
      *          - UCAST_ACTION_FLOODING
      */
-    rtk_api_ret_t rtl_trap_unknownUnicastPktAction_set(rtk_port_t port, rtk_trap_ucast_action_t ucast_action);
+    rtk_api_ret_t rtl_trap_unknownUnicastPktAction_set(rtk_port_t port, rtk_trap_ucast_action_t ucast_action)
+    {
+        return rtk_trap_unknownUnicastPktAction_set(port, ucast_action);
+    }
 
     /* Function Name:
      *      rtl_trap_unknownUnicastPktAction_get
@@ -60,7 +63,10 @@ public:
      *          - UCAST_ACTION_TRAP2CPU
      *          - UCAST_ACTION_FLOODING
      */
-    rtk_api_ret_t rtl_trap_unknownUnicastPktAction_get(rtk_port_t port, rtk_trap_ucast_action_t *pUcast_action);
+    rtk_api_ret_t rtl_trap_unknownUnicastPktAction_get(rtk_port_t port, rtk_trap_ucast_action_t *pUcast_action)
+    {
+        return rtk_trap_unknownUnicastPktAction_get(port, pUcast_action);
+    }
 
     /* Function Name:
      *      rtl_trap_unknownMacPktAction_set
@@ -83,7 +89,10 @@ public:
      *          - UCAST_ACTION_DROP
      *          - UCAST_ACTION_TRAP2CPU
      */
-    rtk_api_ret_t rtl_trap_unknownMacPktAction_set(rtk_trap_ucast_action_t ucast_action);
+    rtk_api_ret_t rtl_trap_unknownMacPktAction_set(rtk_trap_ucast_action_t ucast_action)
+    {
+        return rtk_trap_unknownMacPktAction_set(ucast_action);
+    }
 
     /* Function Name:
      *      rtl_trap_unknownMacPktAction_get
@@ -102,7 +111,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_trap_unknownMacPktAction_get(rtk_trap_ucast_action_t *pUcast_action);
+    rtk_api_ret_t rtl_trap_unknownMacPktAction_get(rtk_trap_ucast_action_t *pUcast_action)
+    {
+        return rtk_trap_unknownMacPktAction_get(pUcast_action);
+    }
 
     /* Function Name:
      *      rtl_trap_unmatchMacPktAction_set
@@ -125,7 +137,10 @@ public:
      *          - UCAST_ACTION_DROP
      *          - UCAST_ACTION_TRAP2CPU
      */
-    rtk_api_ret_t rtl_trap_unmatchMacPktAction_set(rtk_trap_ucast_action_t ucast_action);
+    rtk_api_ret_t rtl_trap_unmatchMacPktAction_set(rtk_trap_ucast_action_t ucast_action)
+    {
+        return rtk_trap_unmatchMacPktAction_set(ucast_action);
+    }
 
     /* Function Name:
      *      rtl_trap_unmatchMacPktAction_get
@@ -148,7 +163,10 @@ public:
      *          - UCAST_ACTION_DROP
      *          - UCAST_ACTION_TRAP2CPU
      */
-    rtk_api_ret_t rtl_trap_unmatchMacPktAction_get(rtk_trap_ucast_action_t *pUcast_action);
+    rtk_api_ret_t rtl_trap_unmatchMacPktAction_get(rtk_trap_ucast_action_t *pUcast_action)
+    {
+        return rtk_trap_unmatchMacPktAction_get(pUcast_action);
+    }
 
     /* Function Name:
      *      rtl_trap_unmatchMacMoving_set
@@ -167,7 +185,10 @@ public:
      *      RT_ERR_INPUT               - Invalid input parameters.
      * Note:
      */
-    rtk_api_ret_t rtl_trap_unmatchMacMoving_set(rtk_port_t port, rtk_enable_t enable);
+    rtk_api_ret_t rtl_trap_unmatchMacMoving_set(rtk_port_t port, rtk_enable_t enable)
+    {
+        return rtk_trap_unmatchMacMoving_set(port, enable);
+    }
 
     /* Function Name:
      *      rtl_trap_unmatchMacMoving_get
@@ -185,7 +206,10 @@ public:
      *      RT_ERR_INPUT               - Invalid input parameters.
      * Note:
      */
-    rtk_api_ret_t rtl_trap_unmatchMacMoving_get(rtk_port_t port, rtk_enable_t *pEnable);
+    rtk_api_ret_t rtl_trap_unmatchMacMoving_get(rtk_port_t port, rtk_enable_t *pEnable)
+    {
+        return rtk_trap_unmatchMacMoving_get(port, pEnable);
+    }
 
     /* Function Name:
      *      rtl_trap_unknownMcastPktAction_set
@@ -215,7 +239,10 @@ public:
      *          - MCAST_ACTION_DROP
      *          - MCAST_ACTION_TRAP2CPU
      */
-    rtk_api_ret_t rtl_trap_unknownMcastPktAction_set(rtk_port_t port, rtk_mcast_type_t type, rtk_trap_mcast_action_t mcast_action);
+    rtk_api_ret_t rtl_trap_unknownMcastPktAction_set(rtk_port_t port, rtk_mcast_type_t type, rtk_trap_mcast_action_t mcast_action)
+    {
+        return rtk_trap_unknownMcastPktAction_set(port, type, mcast_action);
+    }
 
     /* Function Name:
      *      rtl_trap_unknownMcastPktAction_get
@@ -243,7 +270,10 @@ public:
      *          - MCAST_ACTION_DROP
      *          - MCAST_ACTION_TRAP2CPU
      */
-    rtk_api_ret_t rtl_trap_unknownMcastPktAction_get(rtk_port_t port, rtk_mcast_type_t type, rtk_trap_mcast_action_t *pMcast_action);
+    rtk_api_ret_t rtl_trap_unknownMcastPktAction_get(rtk_port_t port, rtk_mcast_type_t type, rtk_trap_mcast_action_t *pMcast_action)
+    {
+        return rtk_trap_unknownMcastPktAction_get(port, type, pMcast_action);
+    }
 
     /* Function Name:
      *      rtl_trap_lldpEnable_set
@@ -266,7 +296,10 @@ public:
      *      - 01:80:c2:00:00:00 ethertype = 0x88CC
 
      */
-    rtk_api_ret_t rtl_trap_lldpEnable_set(rtk_enable_t enabled);
+    rtk_api_ret_t rtl_trap_lldpEnable_set(rtk_enable_t enabled)
+    {
+        return rtk_trap_lldpEnable_set(enabled);
+    }
 
     /* Function Name:
      *      rtl_trap_lldpEnable_get
@@ -288,7 +321,10 @@ public:
      *      - 01:80:c2:00:00:03 ethertype = 0x88CC
      *      - 01:80:c2:00:00:00 ethertype = 0x88CC
      */
-    rtk_api_ret_t rtl_trap_lldpEnable_get(rtk_enable_t *pEnabled);
+    rtk_api_ret_t rtl_trap_lldpEnable_get(rtk_enable_t *pEnabled)
+    {
+        return rtk_trap_lldpEnable_get(pEnabled);
+    }
 
     /* Function Name:
      *      rtl_trap_reasonTrapToCpuPriority_set
@@ -312,7 +348,10 @@ public:
      *      - TRAP_REASON_VLANSTACK
      *      - TRAP_REASON_UNKNOWNMC
      */
-    rtk_api_ret_t rtl_trap_reasonTrapToCpuPriority_set(rtk_trap_reason_type_t type, rtk_pri_t priority);
+    rtk_api_ret_t rtl_trap_reasonTrapToCpuPriority_set(rtk_trap_reason_type_t type, rtk_pri_t priority)
+    {
+        return rtk_trap_reasonTrapToCpuPriority_set(type, priority);
+    }
 
     /* Function Name:
      *      rtl_trap_reasonTrapToCpuPriority_get
@@ -336,7 +375,10 @@ public:
      *      - TRAP_REASON_VLANSTACK
      *      - TRAP_REASON_UNKNOWNMC
      */
-    rtk_api_ret_t rtl_trap_reasonTrapToCpuPriority_get(rtk_trap_reason_type_t type, rtk_pri_t *pPriority);
+    rtk_api_ret_t rtl_trap_reasonTrapToCpuPriority_get(rtk_trap_reason_type_t type, rtk_pri_t *pPriority)
+    {
+        return rtk_trap_reasonTrapToCpuPriority_get(type, pPriority);
+    }
 
     /* Function Name:
      *      rtl_trap_rmaAction_set
@@ -414,7 +456,10 @@ public:
      *      - RMA_ACTION_DROP
      *      - RMA_ACTION_FORWARD_EXCLUDE_CPU
      */
-    rtk_api_ret_t rtl_trap_rmaAction_set(rtk_trap_type_t type, rtk_trap_rma_action_t rma_action);
+    rtk_api_ret_t rtl_trap_rmaAction_set(rtk_trap_type_t type, rtk_trap_rma_action_t rma_action)
+    {
+        return rtk_trap_rmaAction_set(type, rma_action);
+    }
 
     /* Function Name:
      *      rtl_trap_rmaAction_get
@@ -489,7 +534,10 @@ public:
      *      - RMA_ACTION_DROP
      *      - RMA_ACTION_FORWARD_EXCLUDE_CPU
      */
-    rtk_api_ret_t rtl_trap_rmaAction_get(rtk_trap_type_t type, rtk_trap_rma_action_t *pRma_action);
+    rtk_api_ret_t rtl_trap_rmaAction_get(rtk_trap_type_t type, rtk_trap_rma_action_t *pRma_action)
+    {
+        return rtk_trap_rmaAction_get(type, pRma_action);
+    }
 
     /* Function Name:
      *      rtl_trap_rmaKeepFormat_set
@@ -562,7 +610,10 @@ public:
      *      - TRAP_CSSTP.
      *      - TRAP_LLDP.
      */
-    rtk_api_ret_t rtl_trap_rmaKeepFormat_set(rtk_trap_type_t type, rtk_enable_t enable);
+    rtk_api_ret_t rtl_trap_rmaKeepFormat_set(rtk_trap_type_t type, rtk_enable_t enable)
+    {
+        return rtk_trap_rmaKeepFormat_set(type, enable);
+    }
 
     /* Function Name:
      *      rtl_trap_rmaKeepFormat_get
@@ -632,7 +683,10 @@ public:
      *      - TRAP_CSSTP.
      *      - TRAP_LLDP.
      */
-    rtk_api_ret_t rtl_trap_rmaKeepFormat_get(rtk_trap_type_t type, rtk_enable_t *pEnable);
+    rtk_api_ret_t rtl_trap_rmaKeepFormat_get(rtk_trap_type_t type, rtk_enable_t *pEnable)
+    {
+        return rtk_trap_rmaKeepFormat_get(type, pEnable);
+    }
 };
 
 #endif

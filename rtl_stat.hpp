@@ -27,7 +27,10 @@ public:
      * Note:
      *      Reset MIB counter of ports. API will use global reset while port mask is all-ports.
      */
-    rtk_api_ret_t rtl_stat_global_reset();
+    rtk_api_ret_t rtl_stat_global_reset()
+    {
+        return rtk_stat_global_reset();
+    }
 
     /* Function Name:
      *      rtl_stat_port_reset
@@ -44,7 +47,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_stat_port_reset(rtk_port_t port);
+    rtk_api_ret_t rtl_stat_port_reset(rtk_port_t port)
+    {
+        return rtk_stat_port_reset(port);
+    }
 
     /* Function Name:
      *      rtl_stat_queueManage_reset
@@ -61,7 +67,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_stat_queueManage_reset();
+    rtk_api_ret_t rtl_stat_queueManage_reset()
+    {
+        return rtk_stat_queueManage_reset();
+    }
 
     /* Function Name:
      *      rtl_stat_global_get
@@ -79,7 +88,10 @@ public:
      * Note:
      *      Get global MIB counter by index definition.
      */
-    rtk_api_ret_t rtl_stat_global_get(rtk_stat_global_type_t cntr_idx, rtk_stat_counter_t *pCntr);
+    rtk_api_ret_t rtl_stat_global_get(rtk_stat_global_type_t cntr_idx, rtk_stat_counter_t *pCntr)
+    {
+        return rtk_stat_global_get(cntr_idx, pCntr);
+    }
 
     /* Function Name:
      *      rtl_stat_global_getAll
@@ -97,7 +109,10 @@ public:
      * Note:
      *      Get all global MIB counter by index definition.
      */
-    rtk_api_ret_t rtl_stat_global_getAll(rtk_stat_global_cntr_t *pGlobal_cntrs);
+    rtk_api_ret_t rtl_stat_global_getAll(rtk_stat_global_cntr_t *pGlobal_cntrs)
+    {
+        return rtk_stat_global_getAll(pGlobal_cntrs);
+    }
 
     /* Function Name:
      *      rtl_stat_port_get
@@ -115,7 +130,10 @@ public:
      * Note:
      *      Get per port MIB counter by index definition.
      */
-    rtk_api_ret_t rtl_stat_port_get(rtk_port_t port, rtk_stat_port_type_t cntr_idx, rtk_stat_counter_t *pCntr);
+    rtk_api_ret_t rtl_stat_port_get(rtk_port_t port, rtk_stat_port_type_t cntr_idx, rtk_stat_counter_t *pCntr)
+    {
+        return rtk_stat_port_get(port, cntr_idx, pCntr);
+    }
 
     /* Function Name:
      *      rtl_stat_port_getAll
@@ -133,7 +151,10 @@ public:
      * Note:
      *      Get all MIB counters of one port.
      */
-    rtk_api_ret_t rtl_stat_port_getAll(rtk_port_t port, rtk_stat_port_cntr_t *pPort_cntrs);
+    rtk_api_ret_t rtl_stat_port_getAll(rtk_port_t port, rtk_stat_port_cntr_t *pPort_cntrs)
+    {
+        return rtk_stat_port_getAll(port, pPort_cntrs);
+    }
 
     /* Function Name:
      *      rtl_stat_logging_counterCfg_set
@@ -154,7 +175,10 @@ public:
      * Note:
      *      Set the type and mode of Logging Counter.
      */
-    rtk_api_ret_t rtl_stat_logging_counterCfg_set(rtk_uint32 idx, rtk_logging_counter_mode_t mode, rtk_logging_counter_type_t type);
+    rtk_api_ret_t rtl_stat_logging_counterCfg_set(rtk_uint32 idx, rtk_logging_counter_mode_t mode, rtk_logging_counter_type_t type)
+    {
+        return rtk_stat_logging_counterCfg_set(idx, mode, type);
+    }
 
     /* Function Name:
      *      rtl_stat_logging_counterCfg_get
@@ -175,7 +199,10 @@ public:
      * Note:
      *      Get the type and mode of Logging Counter.
      */
-    rtk_api_ret_t rtl_stat_logging_counterCfg_get(rtk_uint32 idx, rtk_logging_counter_mode_t *pMode, rtk_logging_counter_type_t *pType);
+    rtk_api_ret_t rtl_stat_logging_counterCfg_get(rtk_uint32 idx, rtk_logging_counter_mode_t *pMode, rtk_logging_counter_type_t *pType)
+    {
+        return rtk_stat_logging_counterCfg_get(idx, pMode, pType);
+    }
 
     /* Function Name:
      *      rtl_stat_logging_counter_reset
@@ -193,7 +220,10 @@ public:
      * Note:
      *      Reset Logging Counter.
      */
-    rtk_api_ret_t rtl_stat_logging_counter_reset(rtk_uint32 idx);
+    rtk_api_ret_t rtl_stat_logging_counter_reset(rtk_uint32 idx)
+    {
+        return rtk_stat_logging_counter_reset(idx);
+    }
 
     /* Function Name:
      *      rtl_stat_logging_counter_get
@@ -211,7 +241,10 @@ public:
      * Note:
      *      Get Logging Counter.
      */
-    rtk_api_ret_t rtl_stat_logging_counter_get(rtk_uint32 idx, rtk_uint32 *pCnt);
+    rtk_api_ret_t rtl_stat_logging_counter_get(rtk_uint32 idx, rtk_uint32 *pCnt)
+    {
+        return rtk_stat_logging_counter_get(idx, pCnt);
+    }
 
     /* Function Name:
      *      rtl_stat_lengthMode_set
@@ -230,7 +263,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_stat_lengthMode_set(rtk_stat_lengthMode_t txMode, rtk_stat_lengthMode_t rxMode);
+    rtk_api_ret_t rtl_stat_lengthMode_set(rtk_stat_lengthMode_t txMode, rtk_stat_lengthMode_t rxMode)
+    {
+        return rtk_stat_lengthMode_set(txMode, rxMode);
+    }
 
     /* Function Name:
      *      rtl_stat_lengthMode_get
@@ -248,7 +284,10 @@ public:
      *      RT_ERR_SMI          - SMI access error
      * Note:
      */
-    rtk_api_ret_t rtl_stat_lengthMode_get(rtk_stat_lengthMode_t *pTxMode, rtk_stat_lengthMode_t *pRxMode);
+    rtk_api_ret_t rtl_stat_lengthMode_get(rtk_stat_lengthMode_t *pTxMode, rtk_stat_lengthMode_t *pRxMode)
+    {
+        return rtk_stat_lengthMode_get(pTxMode, pRxMode);
+    }
 };
 
 #endif

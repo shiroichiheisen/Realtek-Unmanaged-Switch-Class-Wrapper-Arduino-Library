@@ -27,7 +27,10 @@ public:
      * Note:
      *      This API is used to initialize EEE status.
      */
-    rtk_api_ret_t rtl_ptp_init();
+    rtk_api_ret_t rtl_ptp_init()
+    {
+        return rtk_ptp_init();
+    }
 
     /* Function Name:
      *      rtl_ptp_mac_set
@@ -45,7 +48,10 @@ public:
      * Note:
      *      None
      */
-    rtk_api_ret_t rtl_ptp_mac_set(rtk_mac_t mac);
+    rtk_api_ret_t rtl_ptp_mac_set(rtk_mac_t mac)
+    {
+        return rtk_ptp_mac_set(mac);
+    }
 
     /* Function Name:
      *      rtl_ptp_mac_get
@@ -63,7 +69,10 @@ public:
      * Note:
      *      None
      */
-    rtk_api_ret_t rtl_ptp_mac_get(rtk_mac_t *pMac);
+    rtk_api_ret_t rtl_ptp_mac_get(rtk_mac_t *pMac)
+    {
+        return rtk_ptp_mac_get(pMac);
+    }
 
     /* Function Name:
      *      rtl_ptp_tpid_set
@@ -82,7 +91,10 @@ public:
      * Note:
      *      None
      */
-    rtk_api_ret_t rtl_ptp_tpid_set(rtk_ptp_tpid_t outerId, rtk_ptp_tpid_t innerId);
+    rtk_api_ret_t rtl_ptp_tpid_set(rtk_ptp_tpid_t outerId, rtk_ptp_tpid_t innerId)
+    {
+        return rtk_ptp_tpid_set(outerId, innerId);
+    }
 
     /* Function Name:
      *      rtl_ptp_tpid_get
@@ -100,7 +112,10 @@ public:
      * Note:
      *      None
      */
-    rtk_api_ret_t rtl_ptp_tpid_get(rtk_ptp_tpid_t *pOuterId, rtk_ptp_tpid_t *pInnerId);
+    rtk_api_ret_t rtl_ptp_tpid_get(rtk_ptp_tpid_t *pOuterId, rtk_ptp_tpid_t *pInnerId)
+    {
+        return rtk_ptp_tpid_get(pOuterId, pInnerId);
+    }
 
     /* Function Name:
      *      rtl_ptp_refTime_set
@@ -119,7 +134,10 @@ public:
      * Note:
      *      None
      */
-    rtk_api_ret_t rtl_ptp_refTime_set(rtk_ptp_timeStamp_t timeStamp);
+    rtk_api_ret_t rtl_ptp_refTime_set(rtk_ptp_timeStamp_t timeStamp)
+    {
+        return rtk_ptp_refTime_set(timeStamp);
+    }
 
     /* Function Name:
      *      rtl_ptp_refTime_get
@@ -139,7 +157,10 @@ public:
      * Note:
      *      None
      */
-    rtk_api_ret_t rtl_ptp_refTime_get(rtk_ptp_timeStamp_t *pTimeStamp);
+    rtk_api_ret_t rtl_ptp_refTime_get(rtk_ptp_timeStamp_t *pTimeStamp)
+    {
+        return rtk_ptp_refTime_get(pTimeStamp);
+    }
 
     /* Function Name:
      *      rtl_ptp_refTimeAdjust_set
@@ -160,7 +181,10 @@ public:
      * Note:
      *      sign=0 for positive adjustment, sign=1 for negative adjustment.
      */
-    rtk_api_ret_t rtl_ptp_refTimeAdjust_set(rtk_ptp_sys_adjust_t sign, rtk_ptp_timeStamp_t timeStamp);
+    rtk_api_ret_t rtl_ptp_refTimeAdjust_set(rtk_ptp_sys_adjust_t sign, rtk_ptp_timeStamp_t timeStamp)
+    {
+        return rtk_ptp_refTimeAdjust_set(sign, timeStamp);
+    }
 
     /* Function Name:
      *      rtl_ptp_refTimeEnable_set
@@ -177,7 +201,10 @@ public:
      * Note:
      *      None
      */
-    rtk_api_ret_t rtl_ptp_refTimeEnable_set(rtk_enable_t enable);
+    rtk_api_ret_t rtl_ptp_refTimeEnable_set(rtk_enable_t enable)
+    {
+        return rtk_ptp_refTimeEnable_set(enable);
+    }
 
     /* Function Name:
      *      rtl_ptp_refTimeEnable_get
@@ -197,7 +224,10 @@ public:
      * Note:
      *      None
      */
-    rtk_api_ret_t rtl_ptp_refTimeEnable_get(rtk_enable_t *pEnable);
+    rtk_api_ret_t rtl_ptp_refTimeEnable_get(rtk_enable_t *pEnable)
+    {
+        return rtk_ptp_refTimeEnable_get(pEnable);
+    }
 
     /* Function Name:
      *      rtl_ptp_portEnable_set
@@ -216,7 +246,10 @@ public:
      * Note:
      *      None
      */
-    rtk_api_ret_t rtl_ptp_portEnable_set(rtk_port_t port, rtk_enable_t enable);
+    rtk_api_ret_t rtl_ptp_portEnable_set(rtk_port_t port, rtk_enable_t enable)
+    {
+        return rtk_ptp_portEnable_set(port, enable);
+    }
 
     /* Function Name:
      *      rtl_ptp_portEnable_get
@@ -234,7 +267,10 @@ public:
      * Note:
      *      None
      */
-    rtk_api_ret_t rtl_ptp_portEnable_get(rtk_port_t port, rtk_enable_t *pEnable);
+    rtk_api_ret_t rtl_ptp_portEnable_get(rtk_port_t port, rtk_enable_t *pEnable)
+    {
+        return rtk_ptp_portEnable_get(port, pEnable);
+    }
 
     /* Function Name:
      *      rtl_ptp_portTimestamp_get
@@ -257,7 +293,10 @@ public:
      * Note:
      *      None
      */
-    rtk_api_ret_t rtl_ptp_portTimestamp_get(rtk_port_t port, rtk_ptp_msgType_t type, rtk_ptp_info_t *pInfo);
+    rtk_api_ret_t rtl_ptp_portTimestamp_get(rtk_port_t port, rtk_ptp_msgType_t type, rtk_ptp_info_t *pInfo)
+    {
+        return rtk_ptp_portTimestamp_get(port, type, pInfo);
+    }
 
     /* Function Name:
      *      rtl_ptp_intControl_set
@@ -287,7 +326,10 @@ public:
      *          PTP_INT_TYPE_RX_PDELAY_RESP,
      *          PTP_INT_TYPE_ALL,
      */
-    rtk_api_ret_t rtl_ptp_intControl_set(rtk_ptp_intType_t type, rtk_enable_t enable);
+    rtk_api_ret_t rtl_ptp_intControl_set(rtk_ptp_intType_t type, rtk_enable_t enable)
+    {
+        return rtk_ptp_intControl_set(type, enable);
+    }
 
     /* Function Name:
      *      rtl_ptp_intControl_get
@@ -314,7 +356,10 @@ public:
      *          PTP_INT_TYPE_RX_PDELAY_REQ,
      *          PTP_INT_TYPE_RX_PDELAY_RESP,
      */
-    rtk_api_ret_t rtl_ptp_intControl_get(rtk_ptp_intType_t type, rtk_enable_t *pEnable);
+    rtk_api_ret_t rtl_ptp_intControl_get(rtk_ptp_intType_t type, rtk_enable_t *pEnable)
+    {
+        return rtk_ptp_intControl_get(type, pEnable);
+    }
 
     /* Function Name:
      *      rtl_ptp_intStatus_get
@@ -340,7 +385,10 @@ public:
 
      *
      */
-    rtk_api_ret_t rtl_ptp_intStatus_get(rtk_ptp_intStatus_t *pStatusMask);
+    rtk_api_ret_t rtl_ptp_intStatus_get(rtk_ptp_intStatus_t *pStatusMask)
+    {
+        return rtk_ptp_intStatus_get(pStatusMask);
+    }
 
     /* Function Name:
      *      rtl_ptp_portIntStatus_set
@@ -369,7 +417,10 @@ public:
      *      - PTP_INT_TYPE_RX_PDELAY_RESP   (value[0] (Bit7))
      *      The status will be cleared after execute this API.
      */
-    rtk_api_ret_t rtl_ptp_portIntStatus_set(rtk_port_t port, rtk_ptp_intStatus_t statusMask);
+    rtk_api_ret_t rtl_ptp_portIntStatus_set(rtk_port_t port, rtk_ptp_intStatus_t statusMask)
+    {
+        return rtk_ptp_portIntStatus_set(port, statusMask);
+    }
 
     /* Function Name:
      *      rtl_ptp_portIntStatus_get
@@ -397,7 +448,10 @@ public:
      *      - PTP_INT_TYPE_RX_PDELAY_RESP   (value[0] (Bit7))
      *
      */
-    rtk_api_ret_t rtl_ptp_portIntStatus_get(rtk_port_t port, rtk_ptp_intStatus_t *pStatusMask);
+    rtk_api_ret_t rtl_ptp_portIntStatus_get(rtk_port_t port, rtk_ptp_intStatus_t *pStatusMask)
+    {
+        return rtk_ptp_portIntStatus_get(port, pStatusMask);
+    }
 
     /* Function Name:
      *      rtl_ptp_portTrap_set
@@ -416,7 +470,10 @@ public:
      * Note:
      *      None
      */
-    rtk_api_ret_t rtl_ptp_portTrap_set(rtk_port_t port, rtk_enable_t enable);
+    rtk_api_ret_t rtl_ptp_portTrap_set(rtk_port_t port, rtk_enable_t enable)
+    {
+        return rtk_ptp_portTrap_set(port, enable);
+    }
 
     /* Function Name:
      *      rtl_ptp_portTrap_get
@@ -434,7 +491,10 @@ public:
      * Note:
      *      None
      */
-    rtk_api_ret_t rtl_ptp_portTrap_get(rtk_port_t port, rtk_enable_t *pEnable);
+    rtk_api_ret_t rtl_ptp_portTrap_get(rtk_port_t port, rtk_enable_t *pEnable)
+    {
+        return rtk_ptp_portTrap_get(port, pEnable);
+    }
 };
 
 #endif

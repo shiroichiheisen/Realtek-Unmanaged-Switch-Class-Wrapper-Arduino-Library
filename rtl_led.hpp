@@ -29,7 +29,10 @@ public:
      * Note:
      *      The API can be used to enable LED per port per group.
      */
-    rtk_api_ret_t rtl_led_enable_set(rtk_led_group_t group, rtk_portmask_t *pPortmask);
+    rtk_api_ret_t rtl_led_enable_set(rtk_led_group_t group, rtk_portmask_t *pPortmask)
+    {
+        return rtk_led_enable_set(group, pPortmask);
+    }
 
     /* Function Name:
      *      rtl_led_enable_get
@@ -47,7 +50,10 @@ public:
      * Note:
      *      The API can be used to get LED enable status.
      */
-    rtk_api_ret_t rtl_led_enable_get(rtk_led_group_t group, rtk_portmask_t *pPortmask);
+    rtk_api_ret_t rtl_led_enable_get(rtk_led_group_t group, rtk_portmask_t *pPortmask)
+    {
+        return rtk_led_enable_get(group, pPortmask);
+    }
 
     /* Function Name:
      *      rtl_led_operation_set
@@ -69,7 +75,10 @@ public:
      *      - LED_OP_PARALLEL,
      *      - LED_OP_SERIAL,
      */
-    rtk_api_ret_t rtl_led_operation_set(rtk_led_operation_t mode);
+    rtk_api_ret_t rtl_led_operation_set(rtk_led_operation_t mode)
+    {
+        return rtk_led_operation_set(mode);
+    }
 
     /* Function Name:
      *      rtl_led_operation_get
@@ -91,7 +100,10 @@ public:
      *      - LED_OP_PARALLEL,
      *      - LED_OP_SERIAL,
      */
-    rtk_api_ret_t rtl_led_operation_get(rtk_led_operation_t *pMode);
+    rtk_api_ret_t rtl_led_operation_get(rtk_led_operation_t *pMode)
+    {
+        return rtk_led_operation_get(pMode);
+    }
 
     /* Function Name:
      *      rtl_led_modeForce_set
@@ -117,7 +129,10 @@ public:
      *      - LED_FORCE_OFF,
      *      - LED_FORCE_ON.
      */
-    rtk_api_ret_t rtl_led_modeForce_set(rtk_port_t port, rtk_led_group_t group, rtk_led_force_mode_t mode);
+    rtk_api_ret_t rtl_led_modeForce_set(rtk_port_t port, rtk_led_group_t group, rtk_led_force_mode_t mode)
+    {
+        return rtk_led_modeForce_set(port, group, mode);
+    }
 
     /* Function Name:
      *      rtl_led_modeForce_get
@@ -143,7 +158,10 @@ public:
      *      - LED_FORCE_OFF,
      *      - LED_FORCE_ON.
      */
-    rtk_api_ret_t rtl_led_modeForce_get(rtk_port_t port, rtk_led_group_t group, rtk_led_force_mode_t *pMode);
+    rtk_api_ret_t rtl_led_modeForce_get(rtk_port_t port, rtk_led_group_t group, rtk_led_force_mode_t *pMode)
+    {
+        return rtk_led_modeForce_get(port, group, pMode);
+    }
 
     /* Function Name:
      *      rtl_led_blinkRate_set
@@ -161,7 +179,10 @@ public:
      * Note:
      *      ASIC support 6 types of LED blinking rates at 43ms, 84ms, 120ms, 170ms, 340ms and 670ms.
      */
-    rtk_api_ret_t rtl_led_blinkRate_set(rtk_led_blink_rate_t blinkRate);
+    rtk_api_ret_t rtl_led_blinkRate_set(rtk_led_blink_rate_t blinkRate)
+    {
+        return rtk_led_blinkRate_set(blinkRate);
+    }
 
     /* Function Name:
      *      rtl_led_blinkRate_get
@@ -179,7 +200,10 @@ public:
      * Note:
      *      There are  6 types of LED blinking rates at 43ms, 84ms, 120ms, 170ms, 340ms and 670ms.
      */
-    rtk_api_ret_t rtl_led_blinkRate_get(rtk_led_blink_rate_t *pBlinkRate);
+    rtk_api_ret_t rtl_led_blinkRate_get(rtk_led_blink_rate_t *pBlinkRate)
+    {
+        return rtk_led_blinkRate_get(pBlinkRate);
+    }
 
     /* Function Name:
      *      rtl_led_groupConfig_set
@@ -215,7 +239,10 @@ public:
      *      - 1110        Master            Link on Master Indicator.
      *      - 1111        Act               Activity Indicator. Low for link established.
      */
-    rtk_api_ret_t rtl_led_groupConfig_set(rtk_led_group_t group, rtk_led_congig_t config);
+    rtk_api_ret_t rtl_led_groupConfig_set(rtk_led_group_t group, rtk_led_congig_t config)
+    {
+        return rtk_led_groupConfig_set(group, config);
+    }
 
     /* Function Name:
      *      rtl_led_groupConfig_get
@@ -233,7 +260,10 @@ public:
      * Note:
      *       The API can get LED indicated information configuration for each LED group.
      */
-    rtk_api_ret_t rtl_led_groupConfig_get(rtk_led_group_t group, rtk_led_congig_t *pConfig);
+    rtk_api_ret_t rtl_led_groupConfig_get(rtk_led_group_t group, rtk_led_congig_t *pConfig)
+    {
+        return rtk_led_groupConfig_get(group, pConfig);
+    }
 
     /* Function Name:
      *      rtl_led_groupAbility_set
@@ -253,7 +283,10 @@ public:
      *      None.
      */
 
-    rtk_api_ret_t rtl_led_groupAbility_set(rtk_led_group_t group, rtk_led_ability_t *pAbility);
+    rtk_api_ret_t rtl_led_groupAbility_set(rtk_led_group_t group, rtk_led_ability_t *pAbility)
+    {
+        return rtk_led_groupAbility_set(group, pAbility);
+    }
 
     /* Function Name:
      *      rtl_led_groupAbility_get
@@ -273,7 +306,10 @@ public:
      *      None.
      */
 
-    rtk_api_ret_t rtl_led_groupAbility_get(rtk_led_group_t group, rtk_led_ability_t *pAbility);
+    rtk_api_ret_t rtl_led_groupAbility_get(rtk_led_group_t group, rtk_led_ability_t *pAbility)
+    {
+        return rtk_led_groupAbility_get(group, pAbility);
+    }
 
     /* Function Name:
      *      rtl_led_serialMode_set
@@ -291,7 +327,10 @@ public:
      * Note:
      *      The API can set LED serial mode active congiuration.
      */
-    rtk_api_ret_t rtl_led_serialMode_set(rtk_led_active_t active);
+    rtk_api_ret_t rtl_led_serialMode_set(rtk_led_active_t active)
+    {
+        return rtk_led_serialMode_set(active);
+    }
 
     /* Function Name:
      *      rtl_led_serialMode_get
@@ -309,7 +348,10 @@ public:
      * Note:
      *       The API can get LED serial mode active configuration.
      */
-    rtk_api_ret_t rtl_led_serialMode_get(rtk_led_active_t *pActive);
+    rtk_api_ret_t rtl_led_serialMode_get(rtk_led_active_t *pActive)
+    {
+        return rtk_led_serialMode_get(pActive);
+    }
 
     /* Function Name:
      *      rtl_led_OutputEnable_set
@@ -327,7 +369,10 @@ public:
      * Note:
      *      This API set LED I/O state.
      */
-    rtk_api_ret_t rtl_led_OutputEnable_set(rtk_enable_t state);
+    rtk_api_ret_t rtl_led_OutputEnable_set(rtk_enable_t state)
+    {
+        return rtk_led_OutputEnable_set(state);
+    }
 
     /* Function Name:
      *      rtl_led_OutputEnable_get
@@ -345,7 +390,10 @@ public:
      * Note:
      *      This API set current LED I/O  state.
      */
-    rtk_api_ret_t rtl_led_OutputEnable_get(rtk_enable_t *pState);
+    rtk_api_ret_t rtl_led_OutputEnable_get(rtk_enable_t *pState)
+    {
+        return rtk_led_OutputEnable_get(pState);
+    }
 
     /* Function Name:
      *      rtl_led_serialModePortmask_set
@@ -364,7 +412,10 @@ public:
      * Note:
      *      None.
      */
-    rtk_api_ret_t rtl_led_serialModePortmask_set(rtk_led_serialOutput_t output, rtk_portmask_t *pPortmask);
+    rtk_api_ret_t rtl_led_serialModePortmask_set(rtk_led_serialOutput_t output, rtk_portmask_t *pPortmask)
+    {
+        return rtk_led_serialModePortmask_set(output, pPortmask);
+    }
 
     /* Function Name:
      *      rtl_led_serialModePortmask_get
@@ -383,7 +434,10 @@ public:
      * Note:
      *      None.
      */
-    rtk_api_ret_t rtl_led_serialModePortmask_get(rtk_led_serialOutput_t *pOutput, rtk_portmask_t *pPortmask);
+    rtk_api_ret_t rtl_led_serialModePortmask_get(rtk_led_serialOutput_t *pOutput, rtk_portmask_t *pPortmask)
+    {
+        return rtk_led_serialModePortmask_get(pOutput, pPortmask);
+    }
 };
 
 #endif

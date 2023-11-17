@@ -38,7 +38,10 @@ public:
      *      The ifg_include parameter is used
      *      for rate calculation with/without inter-frame-gap and preamble.
      */
-    rtk_api_ret_t rtl_rate_shareMeter_set(rtk_meter_id_t index, rtk_meter_type_t type, rtk_rate_t rate, rtk_enable_t ifg_include);
+    rtk_api_ret_t rtl_rate_shareMeter_set(rtk_meter_id_t index, rtk_meter_type_t type, rtk_rate_t rate, rtk_enable_t ifg_include)
+    {
+        return rtk_rate_shareMeter_set(index, type, rate, ifg_include);
+    }
 
     /* Function Name:
      *      rtl_rate_shareMeter_get
@@ -58,7 +61,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_rate_shareMeter_get(rtk_meter_id_t index, rtk_meter_type_t *pType, rtk_rate_t *pRate, rtk_enable_t *pIfg_include);
+    rtk_api_ret_t rtl_rate_shareMeter_get(rtk_meter_id_t index, rtk_meter_type_t *pType, rtk_rate_t *pRate, rtk_enable_t *pIfg_include)
+    {
+        return rtk_rate_shareMeter_get(index, pType, pRate, pIfg_include);
+    }
 
     /* Function Name:
      *      rtl_rate_shareMeterBucket_set
@@ -78,7 +84,10 @@ public:
      * Note:
      *      The API can set shared meter bucket size.
      */
-    rtk_api_ret_t rtl_rate_shareMeterBucket_set(rtk_meter_id_t index, rtk_uint32 bucket_size);
+    rtk_api_ret_t rtl_rate_shareMeterBucket_set(rtk_meter_id_t index, rtk_uint32 bucket_size)
+    {
+        return rtk_rate_shareMeterBucket_set(index, bucket_size);
+    }
 
     /* Function Name:
      *      rtl_rate_shareMeterBucket_get
@@ -96,7 +105,10 @@ public:
      * Note:
      *      The API can get shared meter bucket size.
      */
-    rtk_api_ret_t rtl_rate_shareMeterBucket_get(rtk_meter_id_t index, rtk_uint32 *pBucket_size);
+    rtk_api_ret_t rtl_rate_shareMeterBucket_get(rtk_meter_id_t index, rtk_uint32 *pBucket_size)
+    {
+        return rtk_rate_shareMeterBucket_get(index, pBucket_size);
+    }
 
     /* Function Name:
      *      rtl_rate_igrBandwidthCtrlRate_set
@@ -120,7 +132,10 @@ public:
      *      The rate unit is 1 kbps and the range is from 8k to 1048568k. The granularity of rate is 8 kbps.
      *      The ifg_include parameter is used for rate calculation with/without inter-frame-gap and preamble.
      */
-    rtk_api_ret_t rtl_rate_igrBandwidthCtrlRate_set(rtk_port_t port, rtk_rate_t rate, rtk_enable_t ifg_include, rtk_enable_t fc_enable);
+    rtk_api_ret_t rtl_rate_igrBandwidthCtrlRate_set(rtk_port_t port, rtk_rate_t rate, rtk_enable_t ifg_include, rtk_enable_t fc_enable)
+    {
+        return rtk_rate_igrBandwidthCtrlRate_set(port, rate, ifg_include, fc_enable);
+    }
 
     /* Function Name:
      *      rtl_rate_igrBandwidthCtrlRate_get
@@ -142,7 +157,10 @@ public:
      *     The rate unit is 1 kbps and the range is from 8k to 1048568k. The granularity of rate is 8 kbps.
      *     The ifg_include parameter is used for rate calculation with/without inter-frame-gap and preamble.
      */
-    rtk_api_ret_t rtl_rate_igrBandwidthCtrlRate_get(rtk_port_t port, rtk_rate_t *pRate, rtk_enable_t *pIfg_include, rtk_enable_t *pFc_enable);
+    rtk_api_ret_t rtl_rate_igrBandwidthCtrlRate_get(rtk_port_t port, rtk_rate_t *pRate, rtk_enable_t *pIfg_include, rtk_enable_t *pFc_enable)
+    {
+        return rtk_rate_igrBandwidthCtrlRate_get(port, pRate, pIfg_include, pFc_enable);
+    }
 
     /* Function Name:
      *      rtl_rate_egrBandwidthCtrlRate_set
@@ -165,7 +183,10 @@ public:
      *     The rate unit is 1 kbps and the range is from 8k to 1048568k. The granularity of rate is 8 kbps.
      *     The ifg_include parameter is used for rate calculation with/without inter-frame-gap and preamble.
      */
-    rtk_api_ret_t rtl_rate_egrBandwidthCtrlRate_set(rtk_port_t port, rtk_rate_t rate, rtk_enable_t ifg_includ);
+    rtk_api_ret_t rtl_rate_egrBandwidthCtrlRate_set(rtk_port_t port, rtk_rate_t rate, rtk_enable_t ifg_includ)
+    {
+        return rtk_rate_egrBandwidthCtrlRate_set(port, rate, ifg_includ);
+    }
 
     /* Function Name:
      *      rtl_rate_egrBandwidthCtrlRate_get
@@ -186,7 +207,10 @@ public:
      *     The rate unit is 1 kbps and the range is from 8k to 1048568k. The granularity of rate is 8 kbps.
      *     The ifg_include parameter is used for rate calculation with/without inter-frame-gap and preamble.
      */
-    rtk_api_ret_t rtl_rate_egrBandwidthCtrlRate_get(rtk_port_t port, rtk_rate_t *pRate, rtk_enable_t *pIfg_include);
+    rtk_api_ret_t rtl_rate_egrBandwidthCtrlRate_get(rtk_port_t port, rtk_rate_t *pRate, rtk_enable_t *pIfg_include)
+    {
+        return rtk_rate_egrBandwidthCtrlRate_get(port, pRate, pIfg_include);
+    }
 
     /* Function Name:
      *      rtl_rate_egrQueueBwCtrlEnable_set
@@ -207,7 +231,10 @@ public:
      * Note:
      *      None
      */
-    rtk_api_ret_t rtl_rate_egrQueueBwCtrlEnable_set(rtk_port_t port, rtk_qid_t queue, rtk_enable_t enable);
+    rtk_api_ret_t rtl_rate_egrQueueBwCtrlEnable_set(rtk_port_t port, rtk_qid_t queue, rtk_enable_t enable)
+    {
+        return rtk_rate_egrQueueBwCtrlEnable_set(port, queue, enable);
+    }
 
     /* Function Name:
      *      rtl_rate_egrQueueBwCtrlEnable_get
@@ -228,7 +255,10 @@ public:
      * Note:
      *    None.
      */
-    rtk_api_ret_t rtl_rate_egrQueueBwCtrlEnable_get(rtk_port_t port, rtk_qid_t queue, rtk_enable_t *pEnable);
+    rtk_api_ret_t rtl_rate_egrQueueBwCtrlEnable_get(rtk_port_t port, rtk_qid_t queue, rtk_enable_t *pEnable)
+    {
+        return rtk_rate_egrQueueBwCtrlEnable_get(port, queue, pEnable);
+    }
 
     /* Function Name:
      *      rtl_rate_egrQueueBwCtrlRate_set
@@ -250,7 +280,10 @@ public:
      *    The actual rate control is set in shared meters.
      *    The unit of granularity is 8Kbps.
      */
-    rtk_api_ret_t rtl_rate_egrQueueBwCtrlRate_set(rtk_port_t port, rtk_qid_t queue, rtk_meter_id_t index);
+    rtk_api_ret_t rtl_rate_egrQueueBwCtrlRate_set(rtk_port_t port, rtk_qid_t queue, rtk_meter_id_t index)
+    {
+        return rtk_rate_egrQueueBwCtrlRate_set(port, queue, index);
+    }
 
     /* Function Name:
      *      rtl_rate_egrQueueBwCtrlRate_get
@@ -272,7 +305,10 @@ public:
      *    The actual rate control is set in shared meters.
      *    The unit of granularity is 8Kbps.
      */
-    rtk_api_ret_t rtl_rate_egrQueueBwCtrlRate_get(rtk_port_t port, rtk_qid_t queue, rtk_meter_id_t *pIndex);
+    rtk_api_ret_t rtl_rate_egrQueueBwCtrlRate_get(rtk_port_t port, rtk_qid_t queue, rtk_meter_id_t *pIndex)
+    {
+        return rtk_rate_egrQueueBwCtrlRate_get(port, queue, pIndex);
+    }
 };
 
 #endif

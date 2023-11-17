@@ -59,25 +59,48 @@ public:
     rtl_stat stat;
     rtl_storm storm;
     rtl_svlan svlan;
-    rtl_switch switch_;
+    rtl_switch rtlSwitch;
     rtl_trap trap;
     rtl_trunk trunk;
     rtl_vlan vlan;
-
+    
+    /**
+     * @brief Changes the I2C pins.
+     *
+     * This function reassigns the pins used for I2C communication by setting new values for the SDA and SCL pins.
+     *
+     * @param sda The new SDA pin number (uint8_t).
+     * @param scl The new SCL pin number (uint8_t).
+     */
     void changeI2cPins(uint8_t sda, uint8_t scl)
     {
         RTK_I2C_SCK_PIN = scl;
         RTK_I2C_SDA_PIN = sda;
     }
 
+    /**
+     * @brief Changes the I2C delay.
+     *
+     * Sets a new delay value for I2C communication. The delay is specified in microseconds.
+     *
+     * @param delay Delay duration in microseconds (uint8_t).
+     */
     void changeI2cDelay(uint8_t delay)
     {
         RTK_I2C_DELAY = delay;
     }
 
-    int32_t reset()
+    /**
+     * @brief Resets the switch chip.
+     *
+     * Initiates a reset operation on the switch chip. The function returns a status code indicating
+     * whether the reset was successful.
+     *
+     * @return rtk_api_ret_t Returns RT_ERR_OK if the reset is successful, otherwise returns RT_ERR_FAILED.
+     */
+    rtk_api_ret_t reset()
     {
-        int32_t retVal;
+        rtk_api_ret_t retVal;
         retVal = rtl8367c_setAsicReg(RTL8367C_REG_CHIP_RESET, 1);
         if (retVal != RT_ERR_OK)
             return retVal;

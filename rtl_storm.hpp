@@ -30,7 +30,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_rate_stormControlMeterIdx_set(rtk_port_t port, rtk_rate_storm_group_t stormType, rtk_uint32 index);
+    rtk_api_ret_t rtl_rate_stormControlMeterIdx_set(rtk_port_t port, rtk_rate_storm_group_t stormType, rtk_uint32 index)
+    {
+        return rtk_rate_stormControlMeterIdx_set(port, stormType, index);
+    }
 
     /* Function Name:
      *      rtl_rate_stormControlMeterIdx_get
@@ -49,7 +52,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_rate_stormControlMeterIdx_get(rtk_port_t port, rtk_rate_storm_group_t stormType, rtk_uint32 *pIndex);
+    rtk_api_ret_t rtl_rate_stormControlMeterIdx_get(rtk_port_t port, rtk_rate_storm_group_t stormType, rtk_uint32 *pIndex)
+    {
+        return rtk_rate_stormControlMeterIdx_get(port, stormType, pIndex);
+    }
 
     /* Function Name:
      *      rtl_rate_stormControlPortEnable_set
@@ -70,7 +76,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_rate_stormControlPortEnable_set(rtk_port_t port, rtk_rate_storm_group_t stormType, rtk_enable_t enable);
+    rtk_api_ret_t rtl_rate_stormControlPortEnable_set(rtk_port_t port, rtk_rate_storm_group_t stormType, rtk_enable_t enable)
+    {
+        return rtk_rate_stormControlPortEnable_set(port, stormType, enable);
+    }
 
     /* Function Name:
      *      rtl_rate_stormControlPortEnable_get
@@ -90,7 +99,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_rate_stormControlPortEnable_get(rtk_port_t port, rtk_rate_storm_group_t stormType, rtk_enable_t *pEnable);
+    rtk_api_ret_t rtl_rate_stormControlPortEnable_get(rtk_port_t port, rtk_rate_storm_group_t stormType, rtk_enable_t *pEnable)
+    {
+        return rtk_rate_stormControlPortEnable_get(port, stormType, pEnable);
+    }
 
     /* Function Name:
      *      rtl_storm_bypass_set
@@ -161,7 +173,10 @@ public:
      *      - BYPASS_UNDEF_GARP_2F,
      *      - BYPASS_IGMP.
      */
-    rtk_api_ret_t rtl_storm_bypass_set(rtk_storm_bypass_t type, rtk_enable_t enable);
+    rtk_api_ret_t rtl_storm_bypass_set(rtk_storm_bypass_t type, rtk_enable_t enable)
+    {
+        return rtk_storm_bypass_set(type, enable);
+    }
 
     /* Function Name:
      *      rtl_storm_bypass_get
@@ -229,7 +244,10 @@ public:
      *      - BYPASS_UNDEF_GARP_2F,
      *      - BYPASS_IGMP.
      */
-    rtk_api_ret_t rtl_storm_bypass_get(rtk_storm_bypass_t type, rtk_enable_t *pEnable);
+    rtk_api_ret_t rtl_storm_bypass_get(rtk_storm_bypass_t type, rtk_enable_t *pEnable)
+    {
+        return rtk_storm_bypass_get(type, pEnable);
+    }
 
     /* Function Name:
      *      rtl_rate_stormControlExtPortmask_set
@@ -247,7 +265,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_rate_stormControlExtPortmask_set(rtk_portmask_t *pPortmask);
+    rtk_api_ret_t rtl_rate_stormControlExtPortmask_set(rtk_portmask_t *pPortmask)
+    {
+        return rtk_rate_stormControlExtPortmask_set(pPortmask);
+    }
 
     /* Function Name:
      *      rtl_rate_stormControlExtPortmask_get
@@ -265,7 +286,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_rate_stormControlExtPortmask_get(rtk_portmask_t *pPortmask);
+    rtk_api_ret_t rtl_rate_stormControlExtPortmask_get(rtk_portmask_t *pPortmask)
+    {
+        return rtk_rate_stormControlExtPortmask_get(pPortmask);
+    }
 
     /* Function Name:
      *      rtl_rate_stormControlExtEnable_set
@@ -284,7 +308,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_rate_stormControlExtEnable_set(rtk_rate_storm_group_t stormType, rtk_enable_t enable);
+    rtk_api_ret_t rtl_rate_stormControlExtEnable_set(rtk_rate_storm_group_t stormType, rtk_enable_t enable)
+    {
+        return rtk_rate_stormControlExtEnable_set(stormType, enable);
+    }
 
     /* Function Name:
      *      rtl_rate_stormControlExtEnable_get
@@ -302,7 +329,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_rate_stormControlExtEnable_get(rtk_rate_storm_group_t stormType, rtk_enable_t *pEnable);
+    rtk_api_ret_t rtl_rate_stormControlExtEnable_get(rtk_rate_storm_group_t stormType, rtk_enable_t *pEnable)
+    {
+        return rtk_rate_stormControlExtEnable_get(stormType, pEnable);
+    }
 
     /* Function Name:
      *      rtl_rate_stormControlExtMeterIdx_set
@@ -321,7 +351,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_rate_stormControlExtMeterIdx_set(rtk_rate_storm_group_t stormType, rtk_uint32 index);
+    rtk_api_ret_t rtl_rate_stormControlExtMeterIdx_set(rtk_rate_storm_group_t stormType, rtk_uint32 index)
+    {
+        return rtk_rate_stormControlExtMeterIdx_set(stormType, index);
+    }
 
     /* Function Name:
      *      rtl_rate_stormControlExtMeterIdx_get
@@ -340,7 +373,10 @@ public:
      * Note:
      *
      */
-    rtk_api_ret_t rtl_rate_stormControlExtMeterIdx_get(rtk_rate_storm_group_t stormType, rtk_uint32 *pIndex);
+    rtk_api_ret_t rtl_rate_stormControlExtMeterIdx_get(rtk_rate_storm_group_t stormType, rtk_uint32 *pIndex)
+    {
+        return rtk_rate_stormControlExtMeterIdx_get(stormType, pIndex);
+    }
 };
 
 #endif
